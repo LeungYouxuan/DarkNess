@@ -1,0 +1,4 @@
+repository "Darkness@wechat_os_qy0z12vszw-t5zlzlcj2cpncg@cloud.cn"
+  path "/"
+    br "/main"
+    co "/main"

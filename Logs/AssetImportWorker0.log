@@ -1,0 +1,750 @@
+Using pre-set license
+Built from '2022.1/china_unity/release' branch; Version is '2022.1.4f1c1 (97f6ca5590b6) revision 9959114'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19045) 64bit CoreCountrySpecific' Language: 'zh' Physical Memory: 16257 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+D:\Unity 3D\Unity 2022.1.4f1c1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+D:/UnityProject/Darkness
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+61053
+Successfully changed project path to: D:/UnityProject/Darkness
+D:/UnityProject/Darkness
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Refreshing native plugins compatible for Editor in 140.25 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2022.1.4f1c1 (97f6ca5590b6)
+[Subsystems] Discovering subsystems at path D:/Unity 3D/Unity 2022.1.4f1c1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/UnityProject/Darkness/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 2060 (ID=0x1f15)
+    Vendor:   NVIDIA
+    VRAM:     5980 MB
+    Driver:   30.0.15.1277
+Initialize mono
+Mono path[0] = 'D:/Unity 3D/Unity 2022.1.4f1c1/Editor/Data/Managed'
+Mono path[1] = 'D:/Unity 3D/Unity 2022.1.4f1c1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'D:/Unity 3D/Unity 2022.1.4f1c1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56068
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: D:/Unity 3D/Unity 2022.1.4f1c1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll
+Register platform support module: D:/Unity 3D/Unity 2022.1.4f1c1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.003494 seconds.
+Native extension for WindowsStandalone target not found
+[usbmuxd] Start listen thread
+[usbmuxd] Listen thread started
+Native extension for iOS target not found
+Refreshing native plugins compatible for Editor in 142.75 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.801 seconds
+Domain Reload Profiling:
+	ReloadAssembly (801ms)
+		BeginReloadAssembly (87ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (580ms)
+			LoadAssemblies (85ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (124ms)
+				TypeCache.Initialize (124ms)
+					TypeCache.ScanAssembly (123ms)
+				ResolveRequiredComponents (0ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (30ms)
+			SetupLoadedEditorAssemblies (361ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (27ms)
+				SetLoadedEditorAssemblies (8ms)
+				RefreshPlugins (143ms)
+				BeforeProcessingInitializeOnLoad (1ms)
+				ProcessInitializeOnLoadAttributes (134ms)
+				ProcessInitializeOnLoadMethodAttributes (49ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.016842 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\UnityProject\Darkness\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\UnityProject\Darkness\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Refreshing native plugins compatible for Editor in 141.92 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.547 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1548ms)
+		BeginReloadAssembly (124ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (7ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (22ms)
+		EndReloadAssembly (1296ms)
+			LoadAssemblies (95ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (334ms)
+				TypeCache.Initialize (321ms)
+					TypeCache.ScanAssembly (318ms)
+				ResolveRequiredComponents (13ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (72ms)
+			SetupLoadedEditorAssemblies (706ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (16ms)
+				SetLoadedEditorAssemblies (8ms)
+				RefreshPlugins (142ms)
+				BeforeProcessingInitializeOnLoad (141ms)
+				ProcessInitializeOnLoadAttributes (281ms)
+				ProcessInitializeOnLoadMethodAttributes (110ms)
+				AfterProcessingInitializeOnLoad (7ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (9ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 2.20 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5736 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 55 unused Assets / (1.6 MB). Loaded Objects now: 6185.
+Memory consumption went from 0.89 GB to 0.89 GB.
+Total: 5.117400 ms (FindLiveObjects: 0.491100 ms CreateObjectMapping: 0.784600 ms MarkObjects: 3.529100 ms  DeleteObjects: 0.311100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 98558.348710 seconds.
+  path: Assets/NPC/Script
+  artifactKey: Guid(fb0df2cb438fb4847a950be267c22ec0) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/NPC/Script using Guid(fb0df2cb438fb4847a950be267c22ec0) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'f3bbf2093896ff3e1597300bb54f181f') in 0.160659 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Image/扑克牌：斗地主&德州扑克_24.png
+  artifactKey: Guid(91627723b5f3073478db6144423105af) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Image/扑克牌：斗地主&德州扑克_24.png using Guid(91627723b5f3073478db6144423105af) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'e601575fd3b0be925a18f59fa43f58b0') in 0.118165 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/OtherAsset/sensei.png
+  artifactKey: Guid(db7eb5f9f4324084f8b0b054f9e3f15b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/OtherAsset/sensei.png using Guid(db7eb5f9f4324084f8b0b054f9e3f15b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '5a946cfc43b4dd347849a34e1b6dc9d8') in 0.023262 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/PlayerData/Animation/Run.anim
+  artifactKey: Guid(9bc4c57e4d5c80846b8c0cf5f3a06bcd) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/PlayerData/Animation/Run.anim using Guid(9bc4c57e4d5c80846b8c0cf5f3a06bcd) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '0db4ba6240fa377b6178346782683e8b') in 0.014809 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/NPC/Animation/Girl.controller
+  artifactKey: Guid(d486ced2490a1744ca08eb3743256e43) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/NPC/Animation/Girl.controller using Guid(d486ced2490a1744ca08eb3743256e43) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '44f7963e3a575825c3ff40acffe070d5') in 0.008885 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Manager/ISaveable.cs
+  artifactKey: Guid(dfeaec10af04e3a458733c7222f39765) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Manager/ISaveable.cs using Guid(dfeaec10af04e3a458733c7222f39765) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'a14ec5157ebbe864833fb71d1bfe343f') in 0.011829 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Image/Floor.png
+  artifactKey: Guid(a2b74f5bada2f84488488836a105bbe9) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Image/Floor.png using Guid(a2b74f5bada2f84488488836a105bbe9) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'db6d10067f5fcd600d51fc835bdd447f') in 0.037696 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Manager/BagManager.cs
+  artifactKey: Guid(c8f35843592c1ad4da327f66919a01da) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Manager/BagManager.cs using Guid(c8f35843592c1ad4da327f66919a01da) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '1807736c9d5065c5b573b515c2bfdc2e') in 0.010018 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Manager/EventManager.cs
+  artifactKey: Guid(d235d6b03bf5e594ea7bdb894d8876b0) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Manager/EventManager.cs using Guid(d235d6b03bf5e594ea7bdb894d8876b0) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '43651dc86ff9cb3cfee8cc4805d81d8c') in 0.005894 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Image/扑克牌：斗地主&德州扑克_54.png
+  artifactKey: Guid(3d8b21386246cc249acf276a79f20acd) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Image/扑克牌：斗地主&德州扑克_54.png using Guid(3d8b21386246cc249acf276a79f20acd) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '3b87ff06d43e056fe58a63d2ddc2436c') in 0.021793 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Scenes/SceneLoader.unity
+  artifactKey: Guid(b8b24c9cf50693248809d8386d8c86a3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/SceneLoader.unity using Guid(b8b24c9cf50693248809d8386d8c86a3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '3d7a76beab6595b841764fac2e6b253d') in 0.004682 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Image/扑克牌：斗地主&德州扑克_50.png
+  artifactKey: Guid(e969636b7b788e7468ce04ee3873e947) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Image/扑克牌：斗地主&德州扑克_50.png using Guid(e969636b7b788e7468ce04ee3873e947) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '7122253d68b0367e0b5828d4b62704d5') in 0.019822 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Image/扑克牌：斗地主&德州扑克_15.png
+  artifactKey: Guid(f02ad0dc15128234596c6f50f65a0ca7) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Image/扑克牌：斗地主&德州扑克_15.png using Guid(f02ad0dc15128234596c6f50f65a0ca7) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '8c50526a36ad15484ac574a8013b485a') in 0.020532 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000051 seconds.
+  path: Assets/Image/扑克牌：斗地主&德州扑克_35.png
+  artifactKey: Guid(68b153680336fdd40b351fe473e5a5d0) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Image/扑克牌：斗地主&德州扑克_35.png using Guid(68b153680336fdd40b351fe473e5a5d0) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'c51f9eb8a79b0b8e797748447fb87eb8') in 0.021861 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Image/扑克牌：斗地主&德州扑克_46.png
+  artifactKey: Guid(2a83b683b1eb8e84ea66e4aed43dd51e) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Image/扑克牌：斗地主&德州扑克_46.png using Guid(2a83b683b1eb8e84ea66e4aed43dd51e) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'e6421cd8212cc856f4ca94a1b5560ba6') in 0.019184 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/Settings/Scenes/URP2DSceneTemplate.unity
+  artifactKey: Guid(2cda990e2423bbf4892e6590ba056729) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Settings/Scenes/URP2DSceneTemplate.unity using Guid(2cda990e2423bbf4892e6590ba056729) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Opening scene 'Assets/Settings/Scenes/URP2DSceneTemplate.unity additively'
+Loaded scene 'Assets/Settings/Scenes/URP2DSceneTemplate.unity'
+	Deserialize:            2.146 ms
+	Integration:            4.695 ms
+	Integration of assets:  0.002 ms
+	Thread Wait Time:       0.010 ms
+	Total Operation Time:   6.854 ms
+Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'e507fea5fbf21fc5477474db77d70d45') in 0.054183 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/OtherAsset/mani-idle-run.png
+  artifactKey: Guid(6c5b04de0f378b54abb2d895c9061e5a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/OtherAsset/mani-idle-run.png using Guid(6c5b04de0f378b54abb2d895c9061e5a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'a8fe4fa099ff3b7008caa3a8f0ddf347') in 0.033614 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Scenes/AnotherScene.unity
+  artifactKey: Guid(ba5fe96356d48a14d8e10d6828a8939f) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Scenes/AnotherScene.unity using Guid(ba5fe96356d48a14d8e10d6828a8939f) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Opening scene 'Assets/Scenes/AnotherScene.unity additively'
+Loaded scene 'Assets/Scenes/AnotherScene.unity'
+	Deserialize:            0.462 ms
+	Integration:            0.168 ms
+	Integration of assets:  0.002 ms
+	Thread Wait Time:       0.007 ms
+	Total Operation Time:   0.639 ms
+Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '8bb3cdf266ac3499a5a7deee168a5290') in 0.013441 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Plugins/Demigiant/DOTween/DOTween.XML
+  artifactKey: Guid(34192c5e0d14aee43a0e86cc4823268a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Plugins/Demigiant/DOTween/DOTween.XML using Guid(34192c5e0d14aee43a0e86cc4823268a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '5d39caf6aa34412c5e1077a3f49d2c4d') in 0.018552 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Tilemap/Floor_2.asset
+  artifactKey: Guid(05c4259e9ace15a41b0f76cf25abbc71) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Tilemap/Floor_2.asset using Guid(05c4259e9ace15a41b0f76cf25abbc71) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'd4292efe075efb54e4c6c008fac8a4c5') in 0.014176 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Image/扑克牌：斗地主&德州扑克_45.png
+  artifactKey: Guid(b022c9614b5d44f4bb7491855dd9749e) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Image/扑克牌：斗地主&德州扑克_45.png using Guid(b022c9614b5d44f4bb7491855dd9749e) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '10d0268455eb5011e2fca830bab8bdf8') in 0.015674 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/UI/Script
+  artifactKey: Guid(d84ad72bbb91b934fa4c3fef0f44d64e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/UI/Script using Guid(d84ad72bbb91b934fa4c3fef0f44d64e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'a5f133626497da20aab00397f8688044') in 0.003906 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Image/扑克牌：斗地主&德州扑克_32.png
+  artifactKey: Guid(6b5bc521fe663e9499ba6e9c401fbe1e) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Image/扑克牌：斗地主&德州扑克_32.png using Guid(6b5bc521fe663e9499ba6e9c401fbe1e) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'f157ae925015a048a31590bf5cf57dd4') in 0.018109 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/NPC/Script/Girl.cs
+  artifactKey: Guid(59148996c8ca6a74398fe019c0c6af29) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/NPC/Script/Girl.cs using Guid(59148996c8ca6a74398fe019c0c6af29) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '30f7a102f80b64ef497a0150f9729327') in 0.006821 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Tilemap/Floor_0.asset
+  artifactKey: Guid(65011439a648fb341bdc1299c87a6efd) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Tilemap/Floor_0.asset using Guid(65011439a648fb341bdc1299c87a6efd) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '3291fe8a29bdc06db5bff1c1fe41d7c3') in 0.009050 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000048 seconds.
+  path: Assets/NPC/Script/NpcBase.cs
+  artifactKey: Guid(6a5adaea45b96b34589ba62df9413e32) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/NPC/Script/NpcBase.cs using Guid(6a5adaea45b96b34589ba62df9413e32) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'e3889cf737daad0d219e4cd21193476d') in 0.005859 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Plugins
+  artifactKey: Guid(33f87d78555bf62429c86ffe54b5cc2e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Plugins using Guid(33f87d78555bf62429c86ffe54b5cc2e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'cd2c3af70cdbc98b81b3a361bd7d5476') in 0.004821 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000066 seconds.
+  path: Assets/PlayerData/Animation/Run.anim
+  artifactKey: Guid(9bc4c57e4d5c80846b8c0cf5f3a06bcd) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/PlayerData/Animation/Run.anim using Guid(9bc4c57e4d5c80846b8c0cf5f3a06bcd) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '14bedf1499b60e2a6452f41ca77f20c1') in 0.007151 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/NPC/Script/NpcBase.cs
+  artifactKey: Guid(6a5adaea45b96b34589ba62df9413e32) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/NPC/Script/NpcBase.cs using Guid(6a5adaea45b96b34589ba62df9413e32) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '9781b5f71f069db615896651091498ab') in 0.004309 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Image/扑克牌：斗地主&德州扑克_14.png
+  artifactKey: Guid(e5047ac916a729f46917685a2e8ef027) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Image/扑克牌：斗地主&德州扑克_14.png using Guid(e5047ac916a729f46917685a2e8ef027) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '801378cc6d52107a11bd5b4c14af835a') in 0.017994 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/Item/Poker/PokerCard.cs
+  artifactKey: Guid(1b5ca52e19f391743a27d89ca2da18e5) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Item/Poker/PokerCard.cs using Guid(1b5ca52e19f391743a27d89ca2da18e5) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '9fe91a30d2af9824f68eee29876d823a') in 0.005440 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Plugins/Demigiant/DOTween/Editor/Imgs/DOTweenMiniIcon.png
+  artifactKey: Guid(61521df2e071645488ba3d05e49289ae) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Plugins/Demigiant/DOTween/Editor/Imgs/DOTweenMiniIcon.png using Guid(61521df2e071645488ba3d05e49289ae) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'ae28025aa4ed12a163a81e614c8094d9') in 0.022160 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000056 seconds.
+  path: Assets/Text/与流浪汉初次对话.txt
+  artifactKey: Guid(9021f8a8b3367e341a983d5287726d90) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Text/与流浪汉初次对话.txt using Guid(9021f8a8b3367e341a983d5287726d90) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '293683595d6b7800fae68cb983abbeda') in 0.008562 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Scenes/StartScene.unity
+  artifactKey: Guid(611dbfdb2c6dd2f4fb2e82ae3399269b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/StartScene.unity using Guid(611dbfdb2c6dd2f4fb2e82ae3399269b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '113e90c4dccf3bea6cd4a56857027c7e') in 0.005084 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Resources/DOTweenSettings.asset
+  artifactKey: Guid(6a168c9da6576734eafbde85ce9aca3d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Resources/DOTweenSettings.asset using Guid(6a168c9da6576734eafbde85ce9aca3d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'ec3fbd7a5500b54ee4e0a3cfc957e44a') in 0.013286 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Plugins/Demigiant/DOTween/Editor/DOTweenEditor.dll.mdb
+  artifactKey: Guid(8f46310a8b0a8f04a92993c37c713243) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Plugins/Demigiant/DOTween/Editor/DOTweenEditor.dll.mdb using Guid(8f46310a8b0a8f04a92993c37c713243) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '316b424a5589d61f7d6b95fa720b8085') in 0.005654 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/Plugins/Demigiant/DOTween/Editor
+  artifactKey: Guid(b27f58ae5d5c33a4bb2d1f4f34bd036d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Plugins/Demigiant/DOTween/Editor using Guid(b27f58ae5d5c33a4bb2d1f4f34bd036d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'd3d5c2dbfc9a66a90093b733bfce616a') in 0.004687 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Image/扑克牌：斗地主&德州扑克_47.png
+  artifactKey: Guid(38cb606277ef2a44eab34789629f8034) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Image/扑克牌：斗地主&德州扑克_47.png using Guid(38cb606277ef2a44eab34789629f8034) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '1429a52e68edebbb1ba87ea9b5f695da') in 0.021972 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000125 seconds.
+  path: Assets/Plugins/Demigiant/DOTween/Editor/DOTweenEditor.XML
+  artifactKey: Guid(2e2c6224d345d9249acfa6e8ef40bb2d) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Plugins/Demigiant/DOTween/Editor/DOTweenEditor.XML using Guid(2e2c6224d345d9249acfa6e8ef40bb2d) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'f5dcb67bb3591c9a04cf16e0e13d93f1') in 0.006250 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleUI.cs
+  artifactKey: Guid(a060394c03331a64392db53a10e7f2d1) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleUI.cs using Guid(a060394c03331a64392db53a10e7f2d1) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '25ac522a7f1864f3af54c71b8ae00043') in 0.007168 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModulePhysics.cs
+  artifactKey: Guid(dae9aa560b4242648a3affa2bfabc365) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModulePhysics.cs using Guid(dae9aa560b4242648a3affa2bfabc365) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '92d49b502d16e2ad5b1d20c9a06c7177') in 0.006399 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Image/扑克牌：斗地主&德州扑克_03.png
+  artifactKey: Guid(457016dd8a0f403409a032a2c177b409) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Image/扑克牌：斗地主&德州扑克_03.png using Guid(457016dd8a0f403409a032a2c177b409) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '2d90926676d92b94089667c48d7bbfc4') in 0.021469 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/UniversalRenderPipelineGlobalSettings.asset
+  artifactKey: Guid(ff9d7a205fb565f448c2eb20e91b8c15) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/UniversalRenderPipelineGlobalSettings.asset using Guid(ff9d7a205fb565f448c2eb20e91b8c15) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'a264f4ffdcc24461ad76b4098f920ffb') in 0.016225 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Image/扑克牌：斗地主&德州扑克_11.png
+  artifactKey: Guid(9f3e664683d3e5c48b002d2759a81343) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Image/扑克牌：斗地主&德州扑克_11.png using Guid(9f3e664683d3e5c48b002d2759a81343) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'baa0e5b6097b2ccb56ee45b10c3c84fb') in 0.040147 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModulePhysics2D.cs
+  artifactKey: Guid(230fe34542e175245ba74b4659dae700) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModulePhysics2D.cs using Guid(230fe34542e175245ba74b4659dae700) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'ccabbf2ef9d16cecfa28120ef11cfde1') in 0.008713 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Plugins/Demigiant/DOTween/Editor/DOTweenEditor.dll
+  artifactKey: Guid(45d5034162d6cf04dbe46da84fc7d074) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Plugins/Demigiant/DOTween/Editor/DOTweenEditor.dll using Guid(45d5034162d6cf04dbe46da84fc7d074) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '2b4aa656c41e5ba35945e633ad2a6055') in 0.021344 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Image/扑克牌：斗地主&德州扑克_51.png
+  artifactKey: Guid(b006d3302e75a944a94af7c5e8153dc7) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Image/扑克牌：斗地主&德州扑克_51.png using Guid(b006d3302e75a944a94af7c5e8153dc7) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '7c9d7344a9d2c7180c8bde2f4149828b') in 0.022437 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Plugins/Demigiant/DOTween/DOTween.dll
+  artifactKey: Guid(a811bde74b26b53498b4f6d872b09b6d) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Plugins/Demigiant/DOTween/DOTween.dll using Guid(a811bde74b26b53498b4f6d872b09b6d) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'e308589bbecf66cd465e4b8683b890c1') in 0.008083 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/SuitData/PhantomData/TemplateData/Phantom-4.asset
+  artifactKey: Guid(41506cebef00bdf4b95c82e1f022feff) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/SuitData/PhantomData/TemplateData/Phantom-4.asset using Guid(41506cebef00bdf4b95c82e1f022feff) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'eca80827dc5beedf82382f43bb8c459e') in 0.006541 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Image/扑克牌：斗地主&德州扑克_55.png
+  artifactKey: Guid(ee2c2cb1ed012204aa519b76b5f47ab3) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Image/扑克牌：斗地主&德州扑克_55.png using Guid(ee2c2cb1ed012204aa519b76b5f47ab3) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '591b9c34b983d12804f4a553f3e63788') in 0.018345 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Plugins/Demigiant/DOTween/DOTween.dll.mdb
+  artifactKey: Guid(4f007001a22b3d24dae350342c4d19c8) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Plugins/Demigiant/DOTween/DOTween.dll.mdb using Guid(4f007001a22b3d24dae350342c4d19c8) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'e79c6c24876460aedd23585179cf1660') in 0.005387 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Image/扑克牌：斗地主&德州扑克_09.png
+  artifactKey: Guid(f3f90e73d9701d74ebaa86574168bdf0) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Image/扑克牌：斗地主&德州扑克_09.png using Guid(f3f90e73d9701d74ebaa86574168bdf0) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'c0fd7f3dd30ded3def75b63bdf69ed17') in 0.018646 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000043 seconds.
+  path: Assets/UI/Script/ReadingSaveData.cs
+  artifactKey: Guid(c0b3c319405e11e4c814afc1c76d0160) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/UI/Script/ReadingSaveData.cs using Guid(c0b3c319405e11e4c814afc1c76d0160) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '89f6d82058464938af9f39622047637f') in 0.007463 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/NPC
+  artifactKey: Guid(ff0b8e32065c8fb469a5681d2622b400) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/NPC using Guid(ff0b8e32065c8fb469a5681d2622b400) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'ab90cd6e8d02a6e773e913d670229d32') in 0.005452 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Manager/ISaveable.cs
+  artifactKey: Guid(dfeaec10af04e3a458733c7222f39765) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Manager/ISaveable.cs using Guid(dfeaec10af04e3a458733c7222f39765) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'dc09e5a22612fc63467f8b5e248b5d2f') in 0.010816 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleAudio.cs
+  artifactKey: Guid(b766d08851589514b97afb23c6f30a70) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleAudio.cs using Guid(b766d08851589514b97afb23c6f30a70) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'f97a9d6624986125ff8eb8d31ac52233') in 0.006379 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/Plugins/Demigiant/DOTween/Editor/Imgs/DOTweenIcon.png
+  artifactKey: Guid(8da095e39e9b4df488dfd436f81116d6) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Plugins/Demigiant/DOTween/Editor/Imgs/DOTweenIcon.png using Guid(8da095e39e9b4df488dfd436f81116d6) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'ce2f10caf8d73425891d6110b6f6a816') in 0.017951 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Manager/ObjectPoolManager.cs
+  artifactKey: Guid(34213c316e4fe924cad001a2204835ab) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Manager/ObjectPoolManager.cs using Guid(34213c316e4fe924cad001a2204835ab) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'c17a33d9acd3750f036b5ba25c992900') in 0.006347 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000045 seconds.
+  path: Assets/Scenes/AnotherScene.unity
+  artifactKey: Guid(ba5fe96356d48a14d8e10d6828a8939f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/AnotherScene.unity using Guid(ba5fe96356d48a14d8e10d6828a8939f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'd42456dab119450fc1020f6991924591') in 0.005285 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Image/扑克牌：斗地主&德州扑克_36.png
+  artifactKey: Guid(8328f5f2780fe964d839faa0adaf0317) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Image/扑克牌：斗地主&德州扑克_36.png using Guid(8328f5f2780fe964d839faa0adaf0317) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '8fa1bbde83e6235ac989216c41d3eef0') in 0.025312 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Plugins/Demigiant/DOTween/Editor/DOTweenEditor.XML
+  artifactKey: Guid(2e2c6224d345d9249acfa6e8ef40bb2d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Plugins/Demigiant/DOTween/Editor/DOTweenEditor.XML using Guid(2e2c6224d345d9249acfa6e8ef40bb2d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '60d15a6b4722bfe09aa765fa1d2e3835') in 0.005838 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Settings/UniversalRP.asset
+  artifactKey: Guid(681886c5eb7344803b6206f758bf0b1c) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Settings/UniversalRP.asset using Guid(681886c5eb7344803b6206f758bf0b1c) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'd370d106c2456274505bf64ca4d0b007') in 0.034490 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/PlayerData/Script/PlayerData.cs
+  artifactKey: Guid(32eb86e4efb209e42ad72cc17204bb09) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/PlayerData/Script/PlayerData.cs using Guid(32eb86e4efb209e42ad72cc17204bb09) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '81b42059fe509af809fa997d2bdb46c9') in 0.007935 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Image/扑克牌：斗地主&德州扑克_39.png
+  artifactKey: Guid(83b590b1bc7c959419f5e983fa5c8440) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Image/扑克牌：斗地主&德州扑克_39.png using Guid(83b590b1bc7c959419f5e983fa5c8440) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'a93bd57f2e883ff9cba0256d5e22ae2b') in 0.024144 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/SuitData/Scripts/Suit.cs
+  artifactKey: Guid(7874db9765afee84f9cd5b20816d4e01) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/SuitData/Scripts/Suit.cs using Guid(7874db9765afee84f9cd5b20816d4e01) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '32f56c1a279f2bc2360df544bc146857') in 0.005727 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/SuitData/SuitPrefabs/Phantom-1.prefab
+  artifactKey: Guid(acfd07f90dd668349857badba2befe6b) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/SuitData/SuitPrefabs/Phantom-1.prefab using Guid(acfd07f90dd668349857badba2befe6b) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '0642b2ef97f1044a9c59bd8c620a1591') in 0.036582 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/NPC/Script/Girl.cs
+  artifactKey: Guid(59148996c8ca6a74398fe019c0c6af29) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/NPC/Script/Girl.cs using Guid(59148996c8ca6a74398fe019c0c6af29) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '9fe8ea90c718bfe4ae2c436690bdeacc') in 0.010647 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000045 seconds.
+  path: Assets/Image/扑克牌：斗地主&德州扑克_44.png
+  artifactKey: Guid(5b537ddb94ce7cf4490e1f72f66fbd5e) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Image/扑克牌：斗地主&德州扑克_44.png using Guid(5b537ddb94ce7cf4490e1f72f66fbd5e) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '2633987494df6f345f33d7cf16b737c9') in 0.021666 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Image/扑克牌：斗地主&德州扑克_12.png
+  artifactKey: Guid(cf416efe73609da48ba665e52b878669) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Image/扑克牌：斗地主&德州扑克_12.png using Guid(cf416efe73609da48ba665e52b878669) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '0005c633871e41709d201773b594b046') in 0.020050 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/Item/Poker/Poker.cs
+  artifactKey: Guid(fea0aba34ddba6b468e9a93ca8743608) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Item/Poker/Poker.cs using Guid(fea0aba34ddba6b468e9a93ca8743608) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '206fea9c858b426f7ca59d5d2bc5cb39') in 0.007017 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModulePhysics2D.cs
+  artifactKey: Guid(230fe34542e175245ba74b4659dae700) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModulePhysics2D.cs using Guid(230fe34542e175245ba74b4659dae700) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'e953c72adf8cc1aa6eb5a6442ea831ac') in 0.004822 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Plugins/Demigiant/DOTween/Editor/DOTweenEditor.dll
+  artifactKey: Guid(45d5034162d6cf04dbe46da84fc7d074) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Plugins/Demigiant/DOTween/Editor/DOTweenEditor.dll using Guid(45d5034162d6cf04dbe46da84fc7d074) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'd0b5ef8bdee383053ebe20522f62b26b') in 0.010479 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Image/扑克牌：斗地主&德州扑克_29.png
+  artifactKey: Guid(42ffd2f6d177d4445b8c790aab2b182a) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Image/扑克牌：斗地主&德州扑克_29.png using Guid(42ffd2f6d177d4445b8c790aab2b182a) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '09a4c5a8269e7697010f190457c2061b') in 0.020858 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Image/扑克牌：斗地主&德州扑克_31.png
+  artifactKey: Guid(05b5ae876f94bb148a8ee11e8793c55d) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Image/扑克牌：斗地主&德州扑克_31.png using Guid(05b5ae876f94bb148a8ee11e8793c55d) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'b34f9c6c1a2cb7476d2895de2b9de804') in 0.018328 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/OtherAsset/sensei.png
+  artifactKey: Guid(db7eb5f9f4324084f8b0b054f9e3f15b) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/OtherAsset/sensei.png using Guid(db7eb5f9f4324084f8b0b054f9e3f15b) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'd702825e02bdf20c594d640629782446') in 0.014914 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Plugins/Demigiant/DOTween/Editor/Imgs/Footer.png
+  artifactKey: Guid(7051dba417b3d53409f2918f1ea4938d) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Plugins/Demigiant/DOTween/Editor/Imgs/Footer.png using Guid(7051dba417b3d53409f2918f1ea4938d) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '947dd63865dd7b52f3bc2da194cd38bf') in 0.015236 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/OtherAsset/mani-idle-run.png
+  artifactKey: Guid(6c5b04de0f378b54abb2d895c9061e5a) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/OtherAsset/mani-idle-run.png using Guid(6c5b04de0f378b54abb2d895c9061e5a) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '7fbfde80fb6a7b59ca6d281e8f79a22f') in 0.032609 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/NPC/Script/Tramp.cs
+  artifactKey: Guid(a672d5df6b510b34bad28edc1e9d9523) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/NPC/Script/Tramp.cs using Guid(a672d5df6b510b34bad28edc1e9d9523) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '1a088730621b9a6a6748f1ad488e7e24') in 0.005584 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/Manager/DialogManager.cs
+  artifactKey: Guid(10f93c2c487d8f44c8e10bf66637c063) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Manager/DialogManager.cs using Guid(10f93c2c487d8f44c8e10bf66637c063) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'e6095245a5991b1b14fe511d9a2f3736') in 0.004940 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModulePhysics.cs
+  artifactKey: Guid(dae9aa560b4242648a3affa2bfabc365) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModulePhysics.cs using Guid(dae9aa560b4242648a3affa2bfabc365) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '09b1b0e840632e9acc5cb3ad47999bb0') in 0.004394 seconds 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
