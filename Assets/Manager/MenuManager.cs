@@ -1,10 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class MenuManager : Singleton<MenuManager>
 {
-    private Queue<GameObject> menuQueue;
+    public bool isActive;
 
     public GameObject pauseMenu;
 
@@ -14,19 +14,28 @@ public class MenuManager : Singleton<MenuManager>
     protected override void Awake() 
     {
         base.Awake();
-        DontDestroyOnLoad(gameObject);
+        
     }
     private void Start() 
     {
-
+        DontDestroyOnLoad(gameObject);
     }
     private void Update() 
     {
-        if(Input.GetKeyDown(KeyCode.M)&&menuQueue.Peek().name!=mapMenu.name)
+        if(Input.GetKeyDown(KeyCode.Escape))
         {
-            menuQueue.Enqueue(mapMenu);
+            isActive=!isActive;
+            pauseMenu.SetActive(isActive);
+            if(isActive)
+            {
+                EventManager.Instance.TriggerEventListener("PauseGame");
+                
+            }
+            else
+            {
+                EventManager.Instance.TriggerEventListener("ReturnToGame");
+            }
+            //EventManager.Instance.TriggerEventListener("ReturnToGame");
         }
-
     }
-
 }

@@ -5,6 +5,12 @@ using UnityEngine.Events;
 public class EventManager : Singleton<EventManager>
 {
     public Dictionary<string,UnityAction>acitonDic=new Dictionary<string, UnityAction>();
+
+
+    protected override void Awake() {
+        base.Awake();
+        DontDestroyOnLoad(this);
+    }
     
     //添加无参事件
     public void AddEventListener(string name,UnityAction action)

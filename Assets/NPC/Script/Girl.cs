@@ -46,7 +46,6 @@ public class Girl : NpcBase,ISaveable
         }
         else if(currentPoint==point1.transform)
         {
-            Debug.Log("反向移动");
             rbody2D.velocity=new Vector2(-speed,0);
         }
         if(Vector2.Distance(transform.position,currentPoint.position)<1.1f&&currentPoint==point2.transform)
@@ -81,7 +80,6 @@ public class Girl : NpcBase,ISaveable
     }
     public IEnumerator WaitAndSpeek()
     {
-        Debug.Log("等待");
         rbody2D.velocity=Vector2.zero;
         canOperate=false;
         yield return new WaitForSeconds(4f);
