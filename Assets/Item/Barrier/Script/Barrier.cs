@@ -7,6 +7,10 @@ public class Barrier : ItemOnWorld,ISaveable
 
 
     // Start is called before the first frame update
+    private void Awake() {
+        ISaveable saveable =this;
+        saveable.SaveableRegister();
+    }
     void Start()
     {
         animator=GetComponent<Animator>();

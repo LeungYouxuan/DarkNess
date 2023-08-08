@@ -29,8 +29,13 @@ public class PlayerControl : Singleton<PlayerControl>,ISaveable
     protected override void Awake()
     {
         base.Awake();
+
+        Debug.Log(gameObject.name);
+    }
+    private void OnEnable() 
+    {
         ISaveable saveable =this;
-        saveable.SaveableRegister();
+        saveable.SaveableRegister();      
     }
     // Update is called once per frame
     void Update()

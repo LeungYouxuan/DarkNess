@@ -357,7 +357,7 @@ TextureImporter:
         width: 22
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -378,7 +378,7 @@ TextureImporter:
         width: 22
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -399,7 +399,7 @@ TextureImporter:
         width: 26
         height: 36
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -420,7 +420,7 @@ TextureImporter:
         width: 26
         height: 27
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -428,6 +428,90 @@ TextureImporter:
       bones: []
       spriteID: 75cb35d896dba204a8481f2fe6e621a2
       internalID: -1442656578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: obj_misk_atlas_15
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 33
+        width: 24
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e20e46193004254cae6d966fbc3015c
+      internalID: -1347848034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: obj_misk_atlas_16
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 32
+        width: 26
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df12a438b22be974a9daf53b5f2f70ec
+      internalID: -1731159835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: obj_misk_atlas_17
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 0
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b84bbb220eecb8f44a0c7add6aa91be6
+      internalID: 1226330365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: obj_misk_atlas_18
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 0
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97d037e4ceaa450498fe7aae32d1b64f
+      internalID: 1812469423
       vertices: []
       indices: 
       edges: []
@@ -445,14 +529,18 @@ TextureImporter:
     nameFileIdTable:
       obj_misk_atlas_6: 1290928863
       obj_misk_atlas_3: -2073343582
+      obj_misk_atlas_18: 1812469423
       obj_misk_atlas_10: -1926354165
       obj_misk_atlas_9: -1169928051
       obj_misk_atlas_2: 2097643912
+      obj_misk_atlas_16: -1731159835
+      obj_misk_atlas_15: -1347848034
       obj_misk_atlas_5: 445907075
       obj_misk_atlas_12: -1494019158
       obj_misk_atlas_14: -1442656578
       obj_misk_atlas_11: 700406821
       obj_misk_atlas_1: 997108885
+      obj_misk_atlas_17: 1226330365
       obj_misk_atlas_8: -1451650899
       obj_misk_atlas_0: 1622106693
       obj_misk_atlas_7: 1333389504

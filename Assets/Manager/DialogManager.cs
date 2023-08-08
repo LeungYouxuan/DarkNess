@@ -50,7 +50,11 @@ public class DialogManager : Singleton<DialogManager>
         var lineContent=content.text.Split('\n');
 
         return ShowContent(lineContent,0.2f,lineIndex,face,name);
-    }    
+    }   
+    public void CloseDialog()
+    {
+        dialogFrame.SetActive(false);
+    } 
     public int ShowContent(string[] content,float seconds,int index,Sprite face,string name)
     {       
         dialogText.text="";//每次显示内容时先清空上一次显示的
