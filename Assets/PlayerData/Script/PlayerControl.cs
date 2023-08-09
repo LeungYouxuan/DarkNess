@@ -24,18 +24,17 @@ public class PlayerControl : Singleton<PlayerControl>,ISaveable
     {
         rbody=GetComponent<Rigidbody2D>();
         animator=GetComponent<Animator>();
-
+ 
     }
     protected override void Awake()
     {
         base.Awake();
-
-        Debug.Log(gameObject.name);
+        ISaveable saveable =this;
+        saveable.SaveableRegister();
     }
     private void OnEnable() 
     {
-        ISaveable saveable =this;
-        saveable.SaveableRegister();      
+     
     }
     // Update is called once per frame
     void Update()
@@ -59,8 +58,12 @@ public class PlayerControl : Singleton<PlayerControl>,ISaveable
         if(canOperate)
             Moving();
     }
-    private void OnTriggerEnter2D(Collider2D other) {
-        
+    private void OnTriggerEnter2D(Collider2D other) 
+    {
+        if(other.tag=="Transition")
+        {
+            LoaderManager.Instance.Save();
+        }
     }
     void Moving()
     {

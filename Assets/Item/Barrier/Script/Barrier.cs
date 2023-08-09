@@ -8,6 +8,7 @@ public class Barrier : ItemOnWorld,ISaveable
 
     // Start is called before the first frame update
     private void Awake() {
+        canInteract=true;
         ISaveable saveable =this;
         saveable.SaveableRegister();
     }
@@ -15,6 +16,7 @@ public class Barrier : ItemOnWorld,ISaveable
     {
         animator=GetComponent<Animator>();
         rbody=GetComponent<Rigidbody2D>();
+        gameObject.SetActive(canInteract);
     }
 
     // Update is called once per frame
@@ -45,6 +47,7 @@ public class Barrier : ItemOnWorld,ISaveable
         if(player!=null)
         {
             animator.SetBool("isBroken",true);
+            canInteract=false;
         }
     }   
 }

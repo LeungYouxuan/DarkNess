@@ -21,10 +21,14 @@ public class ReadingSaveData : ButtonClickEvent
     protected override void ButtonClick()
     {
         //如果存档文件存在，那么就把存档菜单显示出来
+        //加载存档的场景
         if(File.Exists(LoaderManager.Instance.jsonFloder+"data.sav"))
         {
-            saveDataFrame.SetActive(true);
+            //saveDataFrame.SetActive(true);
+            //  
             //LoaderManager.Instance.Load();
+            LoaderManager.Instance.Load();
+            GameManager.Instance.SceneJump("StartScene",GameManager.Instance.currentScene);
         }               
     }
 }

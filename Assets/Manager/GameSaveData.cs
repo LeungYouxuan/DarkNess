@@ -10,4 +10,5 @@ public class GameSaveData
     public float speed;
     public string itemName;
     public bool canInteract;
+    public Dictionary<string,bool>itemStatusDic;
 }

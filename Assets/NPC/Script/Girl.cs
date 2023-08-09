@@ -15,8 +15,11 @@ public class Girl : NpcBase,ISaveable
     public bool canOperate;
     float speed;
     private void Awake() {
-        ISaveable saveable=this;
+        ISaveable saveable =this;
         saveable.SaveableRegister();
+    }
+    private void OnEnable() {
+       
     }
     void Start()
     {

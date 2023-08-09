@@ -18,6 +18,7 @@ public class GameManager : Singleton<GameManager>,ISaveable
         saveable.SaveableRegister();
         EventManager.Instance.AddEventListener("ReturnToGame",WhenGameReStart);
         EventManager.Instance.AddEventListener("PauseGame",WhenGamePause);
+        LoaderManager.Instance.Load();
     }
     // Update is called once per frame
     void Update()
@@ -27,14 +28,11 @@ public class GameManager : Singleton<GameManager>,ISaveable
     //场景的管理
     public void SceneJump(string from,string target)
     {
-        StartCoroutine(UnLoadScene(from,target));//加载和卸载场景
-        StartCoroutine(LoadScene(target));
+        StartCoroutine(Transition(from,target));
+        
     }
     private IEnumerator UnLoadScene(string from,string target)
-    {
-        //卸载场景之前先保存数据
-        currentScene=target;
-        LoaderManager.Instance.Save();        
+    {     
         AsyncOperation operation=SceneManager.UnloadSceneAsync(from);
         if(!operation.isDone)
         {
@@ -42,13 +40,21 @@ public class GameManager : Singleton<GameManager>,ISaveable
             yield return null;
         }
         Debug.Log("已经卸载了场景");
-        //加载完场景后先保存新场景的数据.          
+                  
     }
     IEnumerator LoadScene(string target)
     {
         yield return SceneManager.LoadSceneAsync(target);
         SceneManager.SetActiveScene(SceneManager.GetSceneByName(target));
-        LoaderManager.Instance.Save();
+        LoaderManager.Instance.Load();
+    }
+    IEnumerator Transition(string from,string target)
+    {
+        yield return SceneManager.UnloadSceneAsync(from);
+        yield return SceneManager.LoadSceneAsync(target,LoadSceneMode.Additive);
+        Scene newScene = SceneManager.GetSceneAt(SceneManager.sceneCount-2);
+        SceneManager.SetActiveScene(newScene);
+        LoaderManager.Instance.Load();
     }
     public void WhenGamePause()
     {

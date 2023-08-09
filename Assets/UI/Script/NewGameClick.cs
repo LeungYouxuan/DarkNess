@@ -34,7 +34,7 @@ public class NewGameClick : ButtonClickEvent
             selectFrame.SetActive(true);
         else
         {
-            LoaderManager.Instance.OnNewGameStart();//这里后期可以换成用事件管理器来调用Trigger函数
+            EventManager.Instance.TriggerEventListener("NewGameStart");//这里后期可以换成用事件管理器来调用Trigger函数
         }
     }
     public void CloseFrame()

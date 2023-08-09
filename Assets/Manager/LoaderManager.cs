@@ -59,14 +59,24 @@ public class LoaderManager : Singleton<LoaderManager>
             Debug.Log("删除原存档");
         }
         //卸载完数据后加载第一个主场景
+        GameManager.Instance.currentScene="MainScene";
         GameManager.Instance.SceneJump("StartScene","MainScene");
     }
     public void Save()
     {
-        saveDataDic.Clear();
+        //saveDataDic.Clear();
+        //列表里的GameSaveData只要不被清空，那么就不会出现Save新场景会删除旧场景的内容
         foreach(var saveable in saveableList)
         {
-            saveDataDic.Add(saveable.GetType().Name,saveable.GenerateSaveData());
+            
+            if(saveDataDic.ContainsKey(saveable.GetType().Name))
+            {
+                saveDataDic[saveable.GetType().Name]=saveable.GenerateSaveData();
+            }
+            else
+            {
+                saveDataDic.Add(saveable.GetType().Name,saveable.GenerateSaveData());
+            }
         }
         var resultPath=jsonFloder+"data.sav";
 
@@ -74,13 +84,9 @@ public class LoaderManager : Singleton<LoaderManager>
 
         if(!File.Exists(resultPath))
         {
-            Directory.CreateDirectory(jsonFloder);
-            File.WriteAllText(resultPath,jsonData);
+            Directory.CreateDirectory(jsonFloder);     
         }
-        else
-        {
-            File.WriteAllText(resultPath,jsonData);
-        }
+        File.WriteAllText(resultPath,jsonData);
         Debug.Log("保存成功");
     }
     public void Load()
@@ -99,6 +105,7 @@ public class LoaderManager : Singleton<LoaderManager>
             foreach(var saveable in saveableList)
             {
                 saveable.RestoreGameSaveData(jsonData[saveable.GetType().Name]);
+
             }
             Debug.Log("加载成功");
         }
