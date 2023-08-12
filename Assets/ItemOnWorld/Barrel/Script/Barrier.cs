@@ -2,40 +2,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Barrier : ItemOnWorld,ISaveable
+public class Barrier : ItemOnWorld
 {
 
 
     // Start is called before the first frame update
     private void Awake() {
-        canInteract=true;
-        ISaveable saveable =this;
-        saveable.SaveableRegister();
     }
     void Start()
     {
+        canInteract=true;
         animator=GetComponent<Animator>();
         rbody=GetComponent<Rigidbody2D>();
-        gameObject.SetActive(canInteract);
+        //激活后马上把自己注册进ObjectManager的列表中
+        ObjectManager.Instance.itemOnWorldList.Add(this);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-    }
-    public GameSaveData GenerateSaveData()
-    {
-        GameSaveData data =new GameSaveData();
-        data.canInteract=canInteract;
-        data.itemName=itemName;
-        return data;
-    }
-
-    public void RestoreGameSaveData(GameSaveData data)
-    {
-        itemName=data.itemName;
-        canInteract=data.canInteract;
+        if(!canInteract)
+        {
+            Hide();
+        }
     }
     protected override void Interaction()
     {
@@ -48,6 +37,15 @@ public class Barrier : ItemOnWorld,ISaveable
         {
             animator.SetBool("isBroken",true);
             canInteract=false;
+            //被摧毁后视为状态更新,需要写入字典,这里调用的是自身的单次更新
+            ObjectManager.Instance.SaveItemSituation(this);
+            //这里要考虑到某些物品会有动画，等动画结束之后才能取消激活
+            Invoke("Hide",0.5f);
+            
         }
-    }   
+    }
+    public void Hide()
+    {
+        gameObject.SetActive(canInteract);
+    }
 }

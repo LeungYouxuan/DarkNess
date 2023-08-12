@@ -15,7 +15,7 @@ public abstract class ItemOnWorld : MonoBehaviour
     //与物品互动
     protected virtual void Interaction()
     {
-
+        
     }
 
 }

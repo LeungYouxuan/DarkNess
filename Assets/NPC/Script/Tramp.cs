@@ -24,7 +24,10 @@ public class Tramp : NpcBase
         if(isDialoging==true&&Input.GetKeyDown(KeyCode.R))
         {
             if(DialogManager.Instance.typeFinshed&&!DialogManager.Instance.cancelTyping)
+            {
+               
                 index=DialogManager.Instance.ShowDialog(textAssetList[lineIndex],face,npcName,index);
+            }
             else if(!DialogManager.Instance.typeFinshed)
             {
                 DialogManager.Instance.cancelTyping=true;

@@ -1,40 +1,40 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-
-
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class PlayerControl : Singleton<PlayerControl>,ISaveable
-{
-    public List<Suit> suitList;   
-    [SerializeField]
-    private TextAsset playerInfo;
+{  
     public Sprite playerFace;
     public string playerName="阿杰";
-    public bool canOperate=true;
-
+    public bool canOperate;
+    public GameObject frame;
+    public Text text;
     [SerializeField]
     private float speed=1;
+
+    public bool isTransiton;
 
     private Rigidbody2D rbody;
 
     private Animator animator;
 
-    void Start()
-    {
-        rbody=GetComponent<Rigidbody2D>();
-        animator=GetComponent<Animator>();
- 
-    }
     protected override void Awake()
     {
         base.Awake();
-        ISaveable saveable =this;
-        saveable.SaveableRegister();
     }
+    
     private void OnEnable() 
     {
      
+    }
+    void Start()
+    {
+        ISaveable saveable=this;
+        saveable.SaveableRegister();
+        rbody=GetComponent<Rigidbody2D>();
+        animator=GetComponent<Animator>();
+        canOperate=true;
     }
     // Update is called once per frame
     void Update()
@@ -47,22 +47,24 @@ public class PlayerControl : Singleton<PlayerControl>,ISaveable
         {
             LoaderManager.Instance.Load();
         }
-        if(Input.GetKeyDown(KeyCode.F5))
+        if(isTransiton)
         {
-            ScreenCapture.CaptureScreenshot(Application.persistentDataPath+"/ScreenShot.png",0);
+            if(Input.GetKeyDown(KeyCode.R))
+            {
+                TransitionManager.Instance.SceneJump(TransitionManager.Instance.currentScene,"AnotherScene");
+            }
         }
-
     }
     void FixedUpdate() 
     {
         if(canOperate)
             Moving();
     }
-    private void OnTriggerEnter2D(Collider2D other) 
-    {
-        if(other.tag=="Transition")
+    private void OnTriggerEnter2D(Collider2D other) {
+        if(other.name=="TransitionPoint")
         {
-            LoaderManager.Instance.Save();
+            Debug.Log("进入传送点附近");
+            isTransiton=true;
         }
     }
     void Moving()

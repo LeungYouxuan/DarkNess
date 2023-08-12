@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Girl : NpcBase,ISaveable
+public class Girl : NpcBase
 {
     // Start is called before the first frame update
     Rigidbody2D rbody2D;
@@ -15,11 +15,7 @@ public class Girl : NpcBase,ISaveable
     public bool canOperate;
     float speed;
     private void Awake() {
-        ISaveable saveable =this;
-        saveable.SaveableRegister();
-    }
-    private void OnEnable() {
-       
+
     }
     void Start()
     {
@@ -89,18 +85,18 @@ public class Girl : NpcBase,ISaveable
         canOperate=true;
     }
 
-    public GameSaveData GenerateSaveData()
-    {
-        GameSaveData newData =new GameSaveData();
-        newData.speed=speed;
-        newData.canOperate=canOperate;
-        return newData;
-    }
+    // public GameSaveData GenerateSaveData()
+    // {
+    //     GameSaveData newData =new GameSaveData();
+    //     newData.speed=speed;
+    //     newData.canOperate=canOperate;
+    //     return newData;
+    // }
 
-    public void RestoreGameSaveData(GameSaveData data)
-    {
-        canOperate=data.canOperate;
-        speed=data.speed;
-    }
+    // public void RestoreGameSaveData(GameSaveData data)
+    // {
+    //     canOperate=data.canOperate;
+    //     speed=data.speed;
+    // }
 }
 

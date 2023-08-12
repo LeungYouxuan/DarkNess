@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 254145659535211900}
   - component: {fileID: 254145659535211902}
   m_Layer: 0
-  m_Name: Barrier
+  m_Name: WineBarrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

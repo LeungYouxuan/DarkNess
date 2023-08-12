@@ -11,7 +11,6 @@ public class ObjectPoolManager : Singleton<ObjectPoolManager>
     {
         base.Awake();
         objectPoolDic = new Dictionary<string, Queue<GameObject>>();
-        Debug.Log("初始化池子成功");
     }
 
     public GameObject GetInstance(string prefabName,Object prefab)
@@ -21,7 +20,7 @@ public class ObjectPoolManager : Singleton<ObjectPoolManager>
         {
             if(objectPoolDic[prefabName].Count>0)
             {
-                //Debug.Log("取出物体");
+                
                 return objectPoolDic[prefabName].Dequeue();
             }
             else
@@ -29,13 +28,12 @@ public class ObjectPoolManager : Singleton<ObjectPoolManager>
                 
                 var newGameObject=Instantiate((GameObject)prefab);
                 newGameObject.SetActive(true);
-                //Debug.Log("生成并拿出物体");
+                
                 return newGameObject;
             }
         }
         else
         {
-            //Debug.Log("生成物品队列并生产物品再拿出");
             objectPoolDic.Add(prefabName, new Queue<GameObject>());
             var newGameObject=Instantiate((GameObject)prefab);
             newGameObject.SetActive(true);

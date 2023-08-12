@@ -8,26 +8,25 @@ public class LoaderManager : Singleton<LoaderManager>
 {
     public string jsonFloder;
 
-    private List<ISaveable>saveableList=new List<ISaveable>();
+    public List<ISaveable>saveableList;
     
-    private Dictionary<string,GameSaveData>saveDataDic=new Dictionary<string, GameSaveData>();
+    public Dictionary<string,GameSaveData>saveDataDic;
 
     
     protected override void Awake()
     {
         base.Awake();
-        DontDestroyOnLoad(gameObject);
-        jsonFloder=Application.persistentDataPath +"/SAVE/";
+        //DontDestroyOnLoad(gameObject);
+        jsonFloder=Application.persistentDataPath+"/SAVE/";
+        saveableList=new List<ISaveable>();
+        saveDataDic=new Dictionary<string, GameSaveData>();
     }
 
     void Start()
     {
-        //加载数据的操作
         EventManager.Instance.AddEventListener("NewGameStart",OnNewGameStart);
-        //
     }
 
-    // Update is called once per frame
     void Update()
     {
         
@@ -53,30 +52,16 @@ public class LoaderManager : Singleton<LoaderManager>
     public void OnNewGameStart()
     {
         var resultPath=jsonFloder+"data.sav";
-        if(File.Exists(resultPath))
-        {
-            File.Delete(resultPath);
-            Debug.Log("删除原存档");
-        }
-        //卸载完数据后加载第一个主场景
-        GameManager.Instance.currentScene="MainScene";
-        GameManager.Instance.SceneJump("StartScene","MainScene");
+        File.Delete(resultPath);
+        Debug.Log("删除原存档");
+        Debug.Log("开始新存档");      
     }
     public void Save()
     {
-        //saveDataDic.Clear();
-        //列表里的GameSaveData只要不被清空，那么就不会出现Save新场景会删除旧场景的内容
+        saveDataDic.Clear();
         foreach(var saveable in saveableList)
         {
-            
-            if(saveDataDic.ContainsKey(saveable.GetType().Name))
-            {
-                saveDataDic[saveable.GetType().Name]=saveable.GenerateSaveData();
-            }
-            else
-            {
-                saveDataDic.Add(saveable.GetType().Name,saveable.GenerateSaveData());
-            }
+            saveDataDic.Add(saveable.GetType().Name,saveable.GenerateSaveData());
         }
         var resultPath=jsonFloder+"data.sav";
 
@@ -84,7 +69,7 @@ public class LoaderManager : Singleton<LoaderManager>
 
         if(!File.Exists(resultPath))
         {
-            Directory.CreateDirectory(jsonFloder);     
+            Directory.CreateDirectory(jsonFloder);
         }
         File.WriteAllText(resultPath,jsonData);
         Debug.Log("保存成功");
@@ -105,7 +90,6 @@ public class LoaderManager : Singleton<LoaderManager>
             foreach(var saveable in saveableList)
             {
                 saveable.RestoreGameSaveData(jsonData[saveable.GetType().Name]);
-
             }
             Debug.Log("加载成功");
         }

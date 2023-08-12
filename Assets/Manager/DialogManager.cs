@@ -47,6 +47,7 @@ public class DialogManager : Singleton<DialogManager>
 
         dialogFrame.SetActive(true);
 
+        //对话按换行符号切割成字符串数组
         var lineContent=content.text.Split('\n');
 
         return ShowContent(lineContent,0.2f,lineIndex,face,name);
@@ -58,6 +59,7 @@ public class DialogManager : Singleton<DialogManager>
     public int ShowContent(string[] content,float seconds,int index,Sprite face,string name)
     {       
         dialogText.text="";//每次显示内容时先清空上一次显示的
+        //如果index>=字符数组的长度，也就是说明读完了
         if(index>=content.Length)
         {           
             dialogFrame.SetActive(false);
@@ -85,11 +87,6 @@ public class DialogManager : Singleton<DialogManager>
     IEnumerator PlayContentSpeedControl(string content,float seconds)
     {
         typeFinshed=false;
-        // for(int i = 0; i < content.Length; i++) 
-        // {
-        //     dialogText.text+=content[i];
-        //     yield return new WaitForSeconds(seconds);
-        // }
         int letter=0;
         while(!cancelTyping&&letter<content.Length-1)
         {

@@ -31,9 +31,13 @@ public class NewGameClick : ButtonClickEvent
         //GameManager.Instance.SceneJump("StartScene","MainScene");
         //先提示玩家这步操作是开新游戏
         if(File.Exists(LoaderManager.Instance.jsonFloder+"data.sav"))
+        {
             selectFrame.SetActive(true);
+            Debug.Log(LoaderManager.Instance.jsonFloder);
+        }
         else
         {
+            
             EventManager.Instance.TriggerEventListener("NewGameStart");//这里后期可以换成用事件管理器来调用Trigger函数
         }
     }
