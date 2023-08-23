@@ -98,4 +98,8 @@ public class DialogManager : Singleton<DialogManager>
         typeFinshed=true;
         cancelTyping=false;
     }
+    public void ShowOption()
+    {
+        
+    }
 }

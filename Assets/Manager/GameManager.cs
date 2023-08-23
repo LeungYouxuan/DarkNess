@@ -15,7 +15,7 @@ public class GameManager : Singleton<GameManager>,ISaveable
     {
         //ISaveable saveable =this;
         //saveable.SaveableRegister();
-        SceneManager.LoadScene("MainScene",LoadSceneMode.Additive);
+        //SceneManager.LoadScene("MainScene",LoadSceneMode.Additive);
         Scene loadScene=SceneManager.GetSceneByName("MainScene");
         SceneManager.sceneLoaded+=(Scene sc,LoadSceneMode loadSceneMode)=>
         {

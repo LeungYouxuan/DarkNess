@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using PluginsTest;
 public class PlayerControl : Singleton<PlayerControl>,ISaveable
 {  
     public Sprite playerFace;
@@ -18,6 +19,8 @@ public class PlayerControl : Singleton<PlayerControl>,ISaveable
     private Rigidbody2D rbody;
 
     private Animator animator;
+
+    private Vector2 lookDir;
 
     protected override void Awake()
     {
@@ -35,6 +38,7 @@ public class PlayerControl : Singleton<PlayerControl>,ISaveable
         rbody=GetComponent<Rigidbody2D>();
         animator=GetComponent<Animator>();
         canOperate=true;
+        lookDir=new Vector2(0,-1);
     }
     // Update is called once per frame
     void Update()
@@ -58,7 +62,7 @@ public class PlayerControl : Singleton<PlayerControl>,ISaveable
     void FixedUpdate() 
     {
         if(canOperate)
-            Moving();
+            MovePlus();
     }
     private void OnTriggerEnter2D(Collider2D other) {
         if(other.name=="TransitionPoint")
@@ -67,6 +71,27 @@ public class PlayerControl : Singleton<PlayerControl>,ISaveable
             isTransiton=true;
         }
     }
+    //四方向移动
+    void MovePlus()
+    {
+        float moveX = Input.GetAxisRaw("Horizontal");
+        float moveY = Input.GetAxisRaw("Vertical"); 
+        rbody.velocity=new Vector2(moveX*speed,moveY*speed);
+        if(rbody.velocity.sqrMagnitude!=0)
+        {
+            animator.SetBool("isWalk",true);
+            animator.SetFloat("lookX",rbody.velocity.normalized.x);
+            animator.SetFloat("lookY",rbody.velocity.normalized.y);
+            lookDir=rbody.velocity.normalized;
+        }
+        else
+        {
+            animator.SetBool("isWalk",false);
+            animator.SetFloat("lookX",lookDir.x);
+            animator.SetFloat("lookY",lookDir.y);
+        } 
+    }
+    //二方向移动
     void Moving()
     {
         float moveX = Input.GetAxisRaw("Horizontal");
