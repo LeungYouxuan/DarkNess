@@ -20,7 +20,7 @@ public class SavePoint : MonoBehaviour
     {
         index=0;
         yesButton.GetComponent<Button>().onClick.AddListener(LoaderManager.Instance.Save);
-        noButton.GetComponent<Button>().onClick.AddListener(DialogManager.Instance.CloseDialog); 
+        //noButton.GetComponent<Button>().onClick.AddListener(DialogManager.Instance.CloseDialog); 
     }
 
     // Update is called once per frame

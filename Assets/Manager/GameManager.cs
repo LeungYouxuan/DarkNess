@@ -15,7 +15,11 @@ public class GameManager : Singleton<GameManager>,ISaveable
     {
         //ISaveable saveable =this;
         //saveable.SaveableRegister();
-        //SceneManager.LoadScene("MainScene",LoadSceneMode.Additive);
+        if(SceneManager.GetSceneByName("MainScene").isLoaded==false)
+        {
+            Debug.Log("主场景未加载，现在正在加载");
+            SceneManager.LoadScene("MainScene",LoadSceneMode.Additive);
+        }
         Scene loadScene=SceneManager.GetSceneByName("MainScene");
         SceneManager.sceneLoaded+=(Scene sc,LoadSceneMode loadSceneMode)=>
         {
@@ -28,7 +32,6 @@ public class GameManager : Singleton<GameManager>,ISaveable
     // Update is called once per frame
     void Update()
     {
-
     }
     public void WhenGamePause()
     {

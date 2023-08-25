@@ -11,6 +11,8 @@ public class PlayerControl : Singleton<PlayerControl>,ISaveable
     public bool canOperate;
     public GameObject frame;
     public Text text;
+    public int money;
+
     [SerializeField]
     private float speed=1;
 
@@ -39,25 +41,12 @@ public class PlayerControl : Singleton<PlayerControl>,ISaveable
         animator=GetComponent<Animator>();
         canOperate=true;
         lookDir=new Vector2(0,-1);
+        UIManager.Instance.AddUiPanel("InGameUIPanel");
     }
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Z))
-        {
-            LoaderManager.Instance.Save();
-        }
-        if(Input.GetKeyDown(KeyCode.X))
-        {
-            LoaderManager.Instance.Load();
-        }
-        if(isTransiton)
-        {
-            if(Input.GetKeyDown(KeyCode.R))
-            {
-                TransitionManager.Instance.SceneJump(TransitionManager.Instance.currentScene,"AnotherScene");
-            }
-        }
+        
     }
     void FixedUpdate() 
     {

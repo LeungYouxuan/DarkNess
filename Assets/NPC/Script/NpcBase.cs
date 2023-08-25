@@ -11,6 +11,8 @@ public abstract class NpcBase : MonoBehaviour
 
     public Sprite face;
 
+    public bool canTalk;
+
     public bool isDialoging;
     public int lineIndex;//同一个文本，页数下标
 
@@ -19,5 +21,20 @@ public abstract class NpcBase : MonoBehaviour
     void Awake()
     {
         
+    }
+    public virtual void Interaction()
+    {
+        // if(isDialoging&&canTalk&&Input.GetMouseButtonDown(0))
+        // {
+        //     Debug.Log("对话中");
+        //     if(DialogManager.Instance.typeFinshed&&!DialogManager.Instance.cancelTyping)
+        //     {
+        //         index=DialogManager.Instance.ShowDialog(textAssetList[lineIndex],face,npcName,index);
+        //     }
+        //     else if(!DialogManager.Instance.typeFinshed)
+        //     {
+        //         DialogManager.Instance.cancelTyping=true;
+        //     }
+        // }
     }
 }

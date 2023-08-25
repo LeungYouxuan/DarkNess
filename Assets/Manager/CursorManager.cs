@@ -10,6 +10,9 @@ public class CursorManager : Singleton<CursorManager>
 
     private bool canClick;
 
+    [SerializeField]
+    private Texture2D cursorSprite;
+
     protected override void Awake() 
     {
         base.Awake();
@@ -22,18 +25,29 @@ public class CursorManager : Singleton<CursorManager>
 
     void Update()
     {
-        if(Input.GetMouseButtonDown(0))
+        if(Input.GetMouseButtonDown(1))
         {
             StartCoroutine(ClickObject());
         }
     }
     IEnumerator  ClickObject()
     {
-        RaycastHit2D hit2D=Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition),Vector2.zero,LayerMask.GetMask("Door"));
-        if(hit2D.collider!=null)
+        
+        RaycastHit2D hit2D=Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition),Vector2.zero);
+        if(hit2D.collider!=null&&hit2D.collider.GetComponent<NpcBase>()!=null)
         {
-            Debug.Log("Target"+hit2D.collider.name);
-            yield return new WaitForEndOfFrame();             
+            hit2D.collider.GetComponent<NpcBase>().isDialoging=true;
+            if(hit2D.collider.GetComponent<NpcBase>().canTalk)
+            {
+                Debug.Log("与目标NPC："+hit2D.collider.name+"开始对话");
+                hit2D.collider.GetComponent<NpcBase>().Interaction();
+                yield return new WaitForEndOfFrame();  
+            }
+            else
+            {
+                Debug.Log("未进入交谈范围");
+            }
+                       
         }     
         if(hit2D.collider==null)
         {
