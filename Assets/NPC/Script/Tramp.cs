@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using MultipleBranchSystem;
-using ClassLibrary1;
 public class Tramp : NpcBase
 {
     Tree<TextAsset> dialogTree;

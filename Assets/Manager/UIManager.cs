@@ -10,6 +10,9 @@ public class UIManager : Singleton<UIManager>
     public Stack<GameObject>uiStack=new Stack<GameObject>();
     public List<GameObject>uiPanelList;
     public GameObject rootPanel;
+
+    public Canvas canvas;
+
     protected override void Awake()
     {
         base.Awake();
@@ -18,10 +21,16 @@ public class UIManager : Singleton<UIManager>
             uiPanelPrefabs.Add(ui.name,ui);
             Debug.Log(uiPanelPrefabs[ui.name].name);
         }
+        
+
     }
     private void Start() 
     {
-        
+        canvas=GetComponent<Canvas>();
+        // canvas.renderMode=RenderMode.ScreenSpaceCamera;
+        // GameObject go=GameObject.Find("Main Camera");
+        // if(go!=null)
+        //     canvas.worldCamera=go.GetComponent<Camera>();
     }
     private void Update() 
     {
@@ -29,6 +38,16 @@ public class UIManager : Singleton<UIManager>
         {
             Debug.Log("打开暂停菜单面板");
             AddUiPanel("PauseMenu");
+        }
+        if(Input.GetKeyDown(KeyCode.B))
+        {
+            Debug.Log("打开玩家主要菜单");
+            AddUiPanel("PlayerMainMenu");
+        }
+        if(Input.GetKeyDown(KeyCode.Tab))
+        {
+            Debug.Log("打开玩家信息菜单");
+            AddUiPanel("PlayerInfoMenu");
         }
     }
     public void AddUiPanel(string targetName)

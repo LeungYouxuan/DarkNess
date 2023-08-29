@@ -11,4 +11,5 @@ public class GameSaveData
     public string itemName;
     public bool canInteract;
     public Dictionary<string,bool>itemOnWorldStituationDic;
+    public Dictionary<string,int>playerItemDic;
 }

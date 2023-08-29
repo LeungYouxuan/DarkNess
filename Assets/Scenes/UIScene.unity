@@ -136,12 +136,12 @@ GameObject:
   - component: {fileID: 778014635}
   - component: {fileID: 778014638}
   m_Layer: 0
-  m_Name: Main Camera
-  m_TagString: MainCamera
+  m_Name: UICamera
+  m_TagString: UICamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!81 &778014635
 AudioListener:
   m_ObjectHideFlags: 0
@@ -201,7 +201,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 778014634}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 5.96, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -223,7 +223,7 @@ MonoBehaviour:
   m_RenderShadows: 1
   m_RequiresDepthTextureOption: 2
   m_RequiresOpaqueTextureOption: 2
-  m_CameraType: 0
+  m_CameraType: 1
   m_Cameras: []
   m_RendererIndex: -1
   m_VolumeLayerMask:
@@ -311,7 +311,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 778014636}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -360,4 +360,7 @@ MonoBehaviour:
   - {fileID: 3831274724206286530, guid: 401eb95a06b0621418923c55dd61fe9e, type: 3}
   - {fileID: 5554963918047910013, guid: 51cd1f0177652ff42932cba509b2d371, type: 3}
   - {fileID: 360007052270686967, guid: 02605a0851741a848be6292f9d6f43a3, type: 3}
+  - {fileID: 4187956465769278007, guid: 97e61694fba26364b8ab1d3f05c01079, type: 3}
+  - {fileID: 7275106774781433397, guid: dde0459a2db9dbc4f9e41253eda5ae49, type: 3}
   rootPanel: {fileID: 0}
+  canvas: {fileID: 0}

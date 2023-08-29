@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class ObjectPoolManager : Singleton<ObjectPoolManager>
 {
 
@@ -16,8 +15,10 @@ public class ObjectPoolManager : Singleton<ObjectPoolManager>
     public GameObject GetInstance(string prefabName,Object prefab)
     {
         
+        //先检测一下缓存字典里是否注册了该预制体队列的模型
         if(objectPoolDic.ContainsKey(prefabName))
         {
+            //要判断一下队列是否为空,利用空池触发机制
             if(objectPoolDic[prefabName].Count>0)
             {
                 

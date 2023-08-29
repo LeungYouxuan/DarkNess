@@ -6,13 +6,13 @@ using UnityEngine.SceneManagement;
 using PluginsTest;
 public class PlayerControl : Singleton<PlayerControl>,ISaveable
 {  
-    public Sprite playerFace;
+    public Sprite playerFace;//玩家头像
     public string playerName="阿杰";
-    public bool canOperate;
-    public GameObject frame;
-    public Text text;
-    public int money;
+    public bool canOperate;//是否可以进行移动等操作
+    public int money;//当前存款
+    public int playerReputation;//声望
 
+    public List<GameObject>playerItemList;
     [SerializeField]
     private float speed=1;
 
