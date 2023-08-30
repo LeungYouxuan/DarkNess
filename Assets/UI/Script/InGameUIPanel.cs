@@ -12,7 +12,7 @@ public class InGameUIPanel : UIPanel
     protected override void Start() 
     {
         base.Start();
-        level=4;
+        level=1;
         canCover=true;
         GetComponent<RectTransform>().offsetMax=new Vector2(GetComponent<RectTransform>().offsetMax.x,0);
         moneyText.text="金钱:"+PlayerControl.Instance.money.ToString();

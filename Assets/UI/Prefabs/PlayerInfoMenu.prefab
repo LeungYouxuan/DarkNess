@@ -93,6 +93,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canCover: 1
   level: 1
+  responseKey: B
   playerName: {fileID: 7275106776352013795}
   playerDeposit: {fileID: 7275106776371583771}
   playerReputation: {fileID: 7275106775584721868}

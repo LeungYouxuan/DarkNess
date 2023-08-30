@@ -8,10 +8,11 @@ public class PlayerInfoMenu : UIPanel
     public Text playerDeposit;
     public Text playerReputation;
     public List<ItemBox>itemBoxList;
+    public KeyCode  responseKey=KeyCode.B;
     protected override void Start()
     {
         canCover=true;
-        level=1;
+        level=0;
         GetComponent<RectTransform>().localPosition=new Vector3(0,0,0);
         GetComponent<RectTransform>().sizeDelta=new Vector2(296,161);   
         if(PlayerControl.Instance!=null)

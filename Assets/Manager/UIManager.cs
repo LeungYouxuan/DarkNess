@@ -3,12 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
+using System;
+
 public class UIManager : Singleton<UIManager>
 {
     [SerializeField]
     public Dictionary<string,GameObject>uiPanelPrefabs=new Dictionary<string, GameObject>();
     public Stack<GameObject>uiStack=new Stack<GameObject>();
-    public List<GameObject>uiPanelList;
+    public List<GameObject>uiPanelList;//方便外部赋值
+
+    public Dictionary<string,KeyCode>responseButtonDic=new Dictionary<string, KeyCode>();//按键配置表
     public GameObject rootPanel;
 
     public Canvas canvas;
@@ -21,111 +25,72 @@ public class UIManager : Singleton<UIManager>
             uiPanelPrefabs.Add(ui.name,ui);
             Debug.Log(uiPanelPrefabs[ui.name].name);
         }
-        
-
     }
     private void Start() 
     {
         canvas=GetComponent<Canvas>();
-        // canvas.renderMode=RenderMode.ScreenSpaceCamera;
-        // GameObject go=GameObject.Find("Main Camera");
-        // if(go!=null)
-        //     canvas.worldCamera=go.GetComponent<Camera>();
+
     }
     private void Update() 
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
+        if(Input.GetKeyDown(InputManager.Instance.responseButtonDic["PauseMenu"]))
         {
             Debug.Log("打开暂停菜单面板");
             AddUiPanel("PauseMenu");
         }
-        if(Input.GetKeyDown(KeyCode.B))
+        if(Input.GetKeyDown(InputManager.Instance.responseButtonDic["PlayerMainMenu"]))
         {
             Debug.Log("打开玩家主要菜单");
             AddUiPanel("PlayerMainMenu");
         }
-        if(Input.GetKeyDown(KeyCode.Tab))
+        if(Input.GetKeyDown(InputManager.Instance.responseButtonDic["PlayerInfoMenu"]))
         {
             Debug.Log("打开玩家信息菜单");
             AddUiPanel("PlayerInfoMenu");
-        }
+        }        
     }
     public void AddUiPanel(string targetName)
     {
         //如果字典里面存有该UiPanel,再去判断栈顶元素是否能被叠加
         if(uiPanelPrefabs.ContainsKey(targetName))
         {
-            Debug.Log("开始尝试打开面板"+targetName);
             if(uiStack.Count==0)
             {
-                var ui=Instantiate(uiPanelPrefabs[targetName]);
-                ui.gameObject.transform.SetParent(gameObject.transform);
-                ui.gameObject.name=targetName;
-                uiStack.Push(ui);
-                uiStack.Peek().gameObject.SetActive(true);            
+                //如果当前UI栈为空，那么直接填入目标
+                PushUIPanel(targetName);
             }
             else
             {
                 //如果栈顶元素就是当前所要添加的UI，那么就执行关闭操作，否则则进行添加操作
                 if(uiStack.Peek().name!=targetName)
                 {
-                    Debug.Log("开始打开面板"+targetName);
-                    Debug.Log(uiStack.Count);
-                    Debug.Log(uiStack.Peek().GetComponent<UIPanel>().canCover);
-                    Debug.Log(uiStack.Peek().GetComponent<UIPanel>().level);
-                    Debug.Log(uiPanelPrefabs[targetName].GetComponent<UIPanel>().level);
-                    //如果栈顶元素不能共存运行，那么将按照优先级顺序进行运行，优先级低的将被弹出栈,优先级相等则说明可以共存
-                    if(uiStack.Peek().GetComponent<UIPanel>().canCover==false&&
-                    uiStack.Peek().GetComponent<UIPanel>().level<uiPanelPrefabs[targetName].GetComponent<UIPanel>().level)
+                    //先判断当前栈顶元素UI是否能被覆盖，若能被覆盖，则把栈顶元素弹出栈，若不能，则把目标UI失活
+                    //如果不能被覆盖：
+                    if(uiStack.Peek().GetComponent<UIPanel>().canCover==false)
                     {
-                        Debug.Log("目标"+targetName+"优先级大于当前栈顶元素,栈顶元素被弹出");
-                        //uiStack.Pop();
-                        //这里不单独写弹出栈了，直接进行关闭。
-                        CloseUiPanel(uiStack.Peek().name);
-                        //入栈
-                        Debug.Log("把目标"+targetName+"填入栈");
-                        var ui=Instantiate(uiPanelPrefabs[targetName]);
-                        ui.gameObject.transform.SetParent(gameObject.transform);
-                        ui.gameObject.name=targetName;
-                        uiStack.Push(ui);
-                        uiStack.Peek().gameObject.SetActive(true);                    
+                        Debug.Log("栈顶元素UI："+targetName+"不能被覆盖，无法打开目标UI"); 
+                        return;                
                     }
-                    else if(uiStack.Peek().GetComponent<UIPanel>().canCover==false&&
-                    uiStack.Peek().GetComponent<UIPanel>().level>uiPanelPrefabs[targetName].GetComponent<UIPanel>().level)
+                    //考虑有些UI需要在游戏游玩期间常驻，与其它UI形成共存状态，这里引入等级参数，等级为1的栈顶元素共存，无需出栈
+                    //step1：
+                    //      能共存且目标UI渲染在栈顶UI之上,直接Push
+                    else if(uiStack.Peek().GetComponent<UIPanel>().canCover&&uiStack.Peek().GetComponent<UIPanel>().level==1)
                     {
-                        Debug.Log("目标"+targetName+"填入栈失败，目标优先级不够高");
-                        return;
+                        PushUIPanel(targetName);
                     }
-                    //考虑到有些UI能被部分UI叠加，部分又不能被叠加，所以要考虑canCover为true时，通过优先级决定去留
-                    else if(uiStack.Peek().GetComponent<UIPanel>().canCover&&
-                    uiStack.Peek().GetComponent<UIPanel>().level<uiPanelPrefabs[targetName].GetComponent<UIPanel>().level)
+                    //step2:
+                    //      不能共存，Pop操作接Push操作
+                    else if(uiStack.Peek().GetComponent<UIPanel>().canCover&&uiStack.Peek().GetComponent<UIPanel>().level==0)
                     {
-                        //入栈
-                        Debug.Log("目标优先级高于当前栈顶元素优先级,当前栈顶元素被弹出");
-                        CloseUiPanel(uiStack.Peek().name);
-                        Debug.Log("把目标"+targetName+"填入栈");
-                        var ui=Instantiate(uiPanelPrefabs[targetName]);
-                        ui.gameObject.transform.SetParent(gameObject.transform);
-                        ui.gameObject.name=targetName;
-                        uiStack.Push(ui);
-                        uiStack.Peek().gameObject.SetActive(true);     
-                    }
-                    else if(uiStack.Peek().GetComponent<UIPanel>().canCover&&
-                    uiStack.Peek().GetComponent<UIPanel>().level>=uiPanelPrefabs[targetName].GetComponent<UIPanel>().level)
-                    {
-                        Debug.Log("把目标"+targetName+"填入栈");
-                        var ui=Instantiate(uiPanelPrefabs[targetName]);
-                        ui.gameObject.transform.SetParent(gameObject.transform);
-                        ui.gameObject.name=targetName;
-                        uiStack.Push(ui);
-                        uiStack.Peek().gameObject.SetActive(true);                          
+                        PopUIPanel();
+                        PushUIPanel(targetName);
                     }
                 }
-                else if(uiStack.Peek().name==targetName)
+                else
                 {
-                    Debug.Log("关闭"+targetName+"面板");
-                    CloseUiPanel(targetName);
-                }                
+                    PopUIPanel();
+                    return;
+                }              
             }
         }
         else
@@ -134,6 +99,7 @@ public class UIManager : Singleton<UIManager>
             return;
         }
     }
+    //非常规关闭
     public void CloseUiPanel(string targetName)
     {
         //先判断栈顶元素是否为空切是否为当前要关闭的
@@ -158,5 +124,17 @@ public class UIManager : Singleton<UIManager>
             Debug.Log("当前栈中元素数量为:"+uiStack.Count);
         }
     }
-
+    private void PushUIPanel(string targetName)
+    {
+        var ui=Instantiate(uiPanelPrefabs[targetName]);
+        ui.gameObject.transform.SetParent(gameObject.transform);
+        ui.gameObject.name=targetName;
+        uiStack.Push(ui);
+        uiStack.Peek().gameObject.SetActive(true);       
+    }
+    private void PopUIPanel()
+    {
+        Debug.Log("弹出栈顶UI");
+        Destroy(uiStack.Pop());
+    }
 }

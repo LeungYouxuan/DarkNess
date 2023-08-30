@@ -296,6 +296,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canCover: 0
   level: 3
+  responseKey: Escape
 --- !u!1 &4524919760052935417
 GameObject:
   m_ObjectHideFlags: 0

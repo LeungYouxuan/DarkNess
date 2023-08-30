@@ -5,6 +5,7 @@ using UnityEngine;
 public class PauseMenu : UIPanel
 {
     // Start is called before the first frame update
+    public KeyCode responseKey=KeyCode.Escape;
     protected override void Start()
     {
         level=3;

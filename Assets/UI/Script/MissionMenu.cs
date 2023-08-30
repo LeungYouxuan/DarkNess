@@ -8,7 +8,7 @@ public class MissionMenu : UIPanel
 
     protected override void Start()
     {
-        level=1;
+        level=0;
         canCover=true;
     }
 

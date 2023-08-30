@@ -93,6 +93,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canCover: 0
   level: 1
+  responseKey: Tab
 --- !u!1 &4187956465896348297
 GameObject:
   m_ObjectHideFlags: 0
