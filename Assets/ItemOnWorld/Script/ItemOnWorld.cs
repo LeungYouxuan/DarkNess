@@ -13,9 +13,8 @@ public abstract class ItemOnWorld : MonoBehaviour
     public Rigidbody2D rbody;
 
     //与物品互动
-    protected virtual void Interaction()
+    public virtual void Interaction()
     {
         
     }
-
 }

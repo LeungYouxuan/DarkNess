@@ -23,7 +23,7 @@ public abstract class PlayerItem : MonoBehaviour
         if(ItemManager.Instance.itemDic.ContainsKey(gameObject.name))
         {
             count=ItemManager.Instance.itemDic[gameObject.name];
-            Debug.Log(count);
+            // Debug.Log(count);
         }
         else
         {

@@ -20,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Street.unity
     guid: 63cdcb21eab0e65468c345c015fc1a17
+  - enabled: 1
+    path: Assets/Scenes/CanteenScene.unity
+    guid: 0263b39eee7ec6b4a874f1f45e047034
+  - enabled: 1
+    path: Assets/Scenes/Farm.unity
+    guid: 9458d6880cecd6d4aace0a20f96ca7a1
   m_configObjects: {}

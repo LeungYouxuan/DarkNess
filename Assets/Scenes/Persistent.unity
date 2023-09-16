@@ -152,6 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee59005166f783040ab8caac6d451de4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentSceneName: Farm
 --- !u!4 &18210212
 Transform:
   m_ObjectHideFlags: 0
@@ -331,9 +332,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10f93c2c487d8f44c8e10bf66637c063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cancelTyping: 0
-  typeFinshed: 0
-  dialogFrame: {fileID: 0}
+  currentDialogInstance: {fileID: 0}
 --- !u!4 &242860058
 Transform:
   m_ObjectHideFlags: 0
@@ -422,6 +421,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 435474a14d6fe024abbc29da55d36681, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canClick: 0
   cursorSprite: {fileID: 0}
 --- !u!4 &408211318
 Transform:

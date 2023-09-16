@@ -18,6 +18,7 @@ public abstract class NpcBase : MonoBehaviour
 
     public int index;//对话总数下标
 
+
     void Awake()
     {
         

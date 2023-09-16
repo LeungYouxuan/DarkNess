@@ -441,7 +441,7 @@ TextureImporter:
         width: 24
         height: 31
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -462,7 +462,7 @@ TextureImporter:
         width: 26
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -483,7 +483,7 @@ TextureImporter:
         width: 20
         height: 28
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -504,7 +504,7 @@ TextureImporter:
         width: 20
         height: 28
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -512,6 +512,174 @@ TextureImporter:
       bones: []
       spriteID: 97d037e4ceaa450498fe7aae32d1b64f
       internalID: 1812469423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: obj_misk_atlas_19
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 676
+        width: 128
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d09bcde1eed755648a33d623e0ea44fd
+      internalID: -1799864295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: obj_misk_atlas_20
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 580
+        width: 128
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50f9ed62fee197f4d82256f287013410
+      internalID: -795162393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: obj_misk_atlas_21
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 582
+        width: 64
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 816837ab0bb26d94d8edb8e6882ec8b1
+      internalID: 370098729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: obj_misk_atlas_22
+      rect:
+        serializedVersion: 2
+        x: 582
+        y: 486
+        width: 52
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47c0bd6b446b649479202347c6304852
+      internalID: 404903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: obj_misk_atlas_23
+      rect:
+        serializedVersion: 2
+        x: 646
+        y: 390
+        width: 20
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0b532ac77c587c4e959578af9866575
+      internalID: -1399079827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: obj_misk_atlas_24
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 420
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8c81e9bd7c4bac40a0674dcb7c93b47
+      internalID: -1961348967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: obj_misk_atlas_25
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 416
+        width: 23
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df18aabe72eb9f4449b1a43ff826d4aa
+      internalID: 1116876485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: obj_misk_atlas_26
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 421
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04f0322a79141da478eb2738c88c6823
+      internalID: -2142510224
       vertices: []
       indices: 
       edges: []
@@ -527,9 +695,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      obj_misk_atlas_13: 1733779936
       obj_misk_atlas_6: 1290928863
+      obj_misk_atlas_21: -795162393
       obj_misk_atlas_3: -2073343582
+      obj_misk_atlas_19: -1799864295
       obj_misk_atlas_18: 1812469423
+      obj_misk_atlas_23: 404903
       obj_misk_atlas_10: -1926354165
       obj_misk_atlas_9: -1169928051
       obj_misk_atlas_2: 2097643912
@@ -542,10 +714,14 @@ TextureImporter:
       obj_misk_atlas_1: 997108885
       obj_misk_atlas_17: 1226330365
       obj_misk_atlas_8: -1451650899
+      obj_misk_atlas_24: -1961348967
       obj_misk_atlas_0: 1622106693
       obj_misk_atlas_7: 1333389504
-      obj_misk_atlas_13: 1733779936
+      obj_misk_atlas_26: 602173912
+      obj_misk_atlas_22: 370098729
+      obj_misk_atlas_20: 1857188994
       obj_misk_atlas_4: 1094096860
+      obj_misk_atlas_25: 1116876485
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 

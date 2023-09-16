@@ -41,7 +41,7 @@ public class PlayerControl : Singleton<PlayerControl>,ISaveable
         animator=GetComponent<Animator>();
         canOperate=true;
         lookDir=new Vector2(0,-1);
-        UIManager.Instance.AddUiPanel("InGameUIPanel");
+        //UIManager.Instance.AddUiPanel("InGameUIPanel");
     }
     // Update is called once per frame
     void Update()

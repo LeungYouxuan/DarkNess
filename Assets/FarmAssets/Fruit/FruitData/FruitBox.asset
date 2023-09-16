@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e4fe206b9cebf44faa32435873a2fac, type: 3}
+  m_Name: FruitBox
+  m_EditorClassIdentifier: 
+  type: 
+  fruitSprite: {fileID: -1961348967, guid: 60b215637b1078b41baad79554df7b56, type: 3}
+  fruitCount: 0

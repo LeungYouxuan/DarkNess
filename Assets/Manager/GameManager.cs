@@ -5,29 +5,23 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class GameManager : Singleton<GameManager>,ISaveable
 {
+   public string currentSceneName;
    protected override void Awake()
     {
         base.Awake();
-        //DontDestroyOnLoad(gameObject);
     }
-    
     void Start()
     {
-        //ISaveable saveable =this;
-        //saveable.SaveableRegister();
-        if(SceneManager.GetSceneByName("MainScene").isLoaded==false)
-        {
-            Debug.Log("主场景未加载，现在正在加载");
-            SceneManager.LoadScene("MainScene",LoadSceneMode.Additive);
-        }
-        Scene loadScene=SceneManager.GetSceneByName("MainScene");
-        SceneManager.sceneLoaded+=(Scene sc,LoadSceneMode loadSceneMode)=>
-        {
-            //SceneManager.SetActiveScene(loadScene);
-            //Debug.Log("设置了新的场景为激活状态");
-        };
+        if(SceneManager.GetSceneByName(currentSceneName).isLoaded)
+            return;
+        else
+            SceneManager.LoadScene(currentSceneName,LoadSceneMode.Additive);
         EventManager.Instance.AddEventListener("ReturnToGame",WhenGameReStart);
         EventManager.Instance.AddEventListener("PauseGame",WhenGamePause);
+
+        //注册风车农场游戏的一些事件:
+        // EventManager.Instance.AddEventListener("AfterPlant",GridManager.Instance.AfterPlant);
+        // EventManager.Instance.AddEventListener("AfterPlant",()=>CursorManager.Instance.canClick=true);
     }
     // Update is called once per frame
     void Update()
@@ -53,5 +47,4 @@ public class GameManager : Singleton<GameManager>,ISaveable
     {
 
     }
-
 }

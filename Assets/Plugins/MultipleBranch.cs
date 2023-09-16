@@ -39,6 +39,24 @@ namespace MultipleBranchSystem
                 PrintTree(node);
             }
         }
+        public TreeNode<T> FindNode(T nodeData,TreeNode<T>node)
+        {
+            if(node==null)
+                return null;
+            if(node.Data.Equals(nodeData))
+            {
+                return node;
+            }
+            foreach(var child in node.ChildList)
+            {
+                TreeNode<T>foundNode=FindNode(nodeData,child);
+                if(foundNode!=null)
+                {
+                    return foundNode;
+                }
+            }
+            return null;
+        }
     }
 }
 

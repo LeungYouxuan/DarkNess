@@ -26,7 +26,7 @@ public class Barrier : ItemOnWorld
             Hide();
         }
     }
-    protected override void Interaction()
+    public override void Interaction()
     {
         
     } 

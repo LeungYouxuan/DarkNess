@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4919404276031083546}
   - component: {fileID: 4919404276031083545}
   - component: {fileID: 4919404276031083547}
+  - component: {fileID: 5415318821751671532}
   m_Layer: 0
   m_Name: Table_2
   m_TagString: Untagged
@@ -25,9 +26,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4919404276031083544}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -904.3, y: -850.19, z: -4.001025}
-  m_LocalScale: {x: 4.0075, y: 4.0075, z: 4.0075}
+  m_LocalScale: {x: 2.485927, y: 2.485927, z: 2.485927}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -111,3 +112,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.48, y: 0.8}
   m_EdgeRadius: 0
+--- !u!114 &5415318821751671532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4919404276031083544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c86451f98cc4ba42a894b66db290d14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: DiningTable
+  canInteract: 1
+  animator: {fileID: 0}
+  rbody: {fileID: 0}

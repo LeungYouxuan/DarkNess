@@ -124,7 +124,7 @@ public class UIManager : Singleton<UIManager>
             Debug.Log("当前栈中元素数量为:"+uiStack.Count);
         }
     }
-    private void PushUIPanel(string targetName)
+    public void PushUIPanel(string targetName)
     {
         var ui=Instantiate(uiPanelPrefabs[targetName]);
         ui.gameObject.transform.SetParent(gameObject.transform);
@@ -132,7 +132,7 @@ public class UIManager : Singleton<UIManager>
         uiStack.Push(ui);
         uiStack.Peek().gameObject.SetActive(true);       
     }
-    private void PopUIPanel()
+    public void PopUIPanel()
     {
         Debug.Log("弹出栈顶UI");
         Destroy(uiStack.Pop());

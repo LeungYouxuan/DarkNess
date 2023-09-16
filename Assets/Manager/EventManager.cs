@@ -9,7 +9,6 @@ public class EventManager : Singleton<EventManager>
 
     protected override void Awake() {
         base.Awake();
-        DontDestroyOnLoad(this);
     }
     
     //添加无参事件

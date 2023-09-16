@@ -4,27 +4,21 @@ using UnityEngine;
 using MultipleBranchSystem;
 public class Tramp : NpcBase
 {
-    Tree<TextAsset> dialogTree;
-
-
+    [SerializeField]
+    private DialogInstance currentNpcDialogInstance;
+    private Dictionary<string,DialogInstance>npcDialogInstanceDic=new Dictionary<string, DialogInstance>();//对话内容字典
     void Awake()
     {
-        dialogTree=new Tree<TextAsset>(textAssetList[0]);
-        TreeNode<TextAsset>nodeA=dialogTree.Root;
-        dialogTree.AddChild(nodeA,textAssetList[1]);
-        dialogTree.AddChild(nodeA,textAssetList[2]);
+        
     }
     void OnEnable() 
     {
-
     }
     void Start()
     {
         lineIndex=0;
         index=0;
-        Debug.Log("当前对话节点的子节点数:"+dialogTree.Root.ChildList.Count);
     }
-
     // Update is called once per frame
     void Update()
     {
@@ -32,22 +26,10 @@ public class Tramp : NpcBase
     }   
     public override void Interaction()
     {
-        if(isDialoging&&canTalk)
-        {
-            Debug.Log("对话中");
-
-            if(DialogManager.Instance.typeFinshed&&!DialogManager.Instance.cancelTyping)
-            {
-                if(face==null)
-                    Debug.Log("NULL");
-                
-                index=DialogManager.Instance.ShowDialog(textAssetList[lineIndex],face,npcName,index);
-            }
-            else if(!DialogManager.Instance.typeFinshed)
-            {
-                DialogManager.Instance.cancelTyping=true;
-            }
-        }
+        //上传对话实例到DialogManager
+        DialogManager.Instance.currentDialogInstance=currentNpcDialogInstance;
+        //这里可以执行一些操作，用于开始对话前.
+        DialogManager.Instance.StartDialoging();
     }
     private void OnTriggerEnter2D(Collider2D other) {
         canTalk=true;
