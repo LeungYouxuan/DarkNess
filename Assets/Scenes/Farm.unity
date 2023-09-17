@@ -153,13 +153,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   totalSeedsCount: 0
+  gameTotalTime: 25
+  score: 0
   groundList:
+  - {fileID: 4451866150923167172, guid: 922773f2e6679fc40b6a4137986452ba, type: 3}
   - {fileID: 3644237586989746751, guid: 57519c5437234f04398cabf6d35c100a, type: 3}
   - {fileID: 6652762362378614245, guid: e812cb349fa2df64c9e26d0bde3b147e, type: 3}
-  - {fileID: 1406703022179311967, guid: c3439fbc12910b749b0f682d35acdafe, type: 3}
   seedsList:
   - {fileID: 9215013391188827095, guid: 6d272af96d70bfe4abd34b37a944995c, type: 3}
-  - {fileID: 5996712248385113856, guid: 4c662bf0d068b1c4ebe795eb3813134b, type: 3}
+  - {fileID: 1178753871634833610, guid: a4a3d136b4498454799422ab60cf0d44, type: 3}
   - {fileID: 9215013391188827095, guid: 6d272af96d70bfe4abd34b37a944995c, type: 3}
   - {fileID: 1178753871634833610, guid: 3f9f9a85346813a4281c4fc66a93aa7c, type: 3}
   - {fileID: 9215013391188827095, guid: 6d272af96d70bfe4abd34b37a944995c, type: 3}
@@ -169,24 +171,24 @@ MonoBehaviour:
   - {fileID: 9215013391188827095, guid: 6d272af96d70bfe4abd34b37a944995c, type: 3}
   - {fileID: 9215013391188827095, guid: 6d272af96d70bfe4abd34b37a944995c, type: 3}
   - {fileID: 9215013391188827095, guid: 6d272af96d70bfe4abd34b37a944995c, type: 3}
-  - {fileID: 5996712248385113856, guid: 4c662bf0d068b1c4ebe795eb3813134b, type: 3}
+  - {fileID: 1178753871634833610, guid: a4a3d136b4498454799422ab60cf0d44, type: 3}
   - {fileID: 9215013391188827095, guid: 6d272af96d70bfe4abd34b37a944995c, type: 3}
-  - {fileID: 5996712248385113856, guid: 4c662bf0d068b1c4ebe795eb3813134b, type: 3}
+  - {fileID: 1178753871634833610, guid: a4a3d136b4498454799422ab60cf0d44, type: 3}
   - {fileID: 9215013391188827095, guid: 6d272af96d70bfe4abd34b37a944995c, type: 3}
   - {fileID: 9215013391188827095, guid: 6d272af96d70bfe4abd34b37a944995c, type: 3}
-  - {fileID: 5996712248385113856, guid: 4c662bf0d068b1c4ebe795eb3813134b, type: 3}
-  - {fileID: 5996712248385113856, guid: 4c662bf0d068b1c4ebe795eb3813134b, type: 3}
-  - {fileID: 5996712248385113856, guid: 4c662bf0d068b1c4ebe795eb3813134b, type: 3}
-  - {fileID: 5996712248385113856, guid: 4c662bf0d068b1c4ebe795eb3813134b, type: 3}
-  - {fileID: 5996712248385113856, guid: 4c662bf0d068b1c4ebe795eb3813134b, type: 3}
-  - {fileID: 5996712248385113856, guid: 4c662bf0d068b1c4ebe795eb3813134b, type: 3}
+  - {fileID: 1178753871634833610, guid: a4a3d136b4498454799422ab60cf0d44, type: 3}
+  - {fileID: 1178753871634833610, guid: a4a3d136b4498454799422ab60cf0d44, type: 3}
+  - {fileID: 1178753871634833610, guid: a4a3d136b4498454799422ab60cf0d44, type: 3}
+  - {fileID: 1178753871634833610, guid: a4a3d136b4498454799422ab60cf0d44, type: 3}
+  - {fileID: 1178753871634833610, guid: a4a3d136b4498454799422ab60cf0d44, type: 3}
+  - {fileID: 1178753871634833610, guid: a4a3d136b4498454799422ab60cf0d44, type: 3}
   - {fileID: 1178753871634833610, guid: 3f9f9a85346813a4281c4fc66a93aa7c, type: 3}
   - {fileID: 1178753871634833610, guid: 3f9f9a85346813a4281c4fc66a93aa7c, type: 3}
   - {fileID: 1178753871634833610, guid: 3f9f9a85346813a4281c4fc66a93aa7c, type: 3}
   currentSeed: {fileID: 0}
   templateFruitBox: {fileID: 11400000, guid: 36e1b07f6e1759e4aabbafb1e6c5c5f2, type: 2}
   templateSeedsBox: {fileID: 11400000, guid: 26c1a2ef3b59be94c8f8331e0c3209fa, type: 2}
-  index: 2
+  index: 0
 --- !u!4 &11370950
 Transform:
   m_ObjectHideFlags: 0

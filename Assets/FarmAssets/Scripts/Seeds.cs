@@ -1,19 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class Seeds : MonoBehaviour
 {
     // Start is called before the first frame update
     public Seeds_SO templateSeedData;//模版数据
     public Seeds_SO thisSeedsData;
+    private float ripeningTime;
+    public GameObject silder;
     void Awake()
     {
         if(thisSeedsData == null)
         {
-            Debug.Log("获取种子数据");
+            //Debug.Log("获取种子数据");
             thisSeedsData=Instantiate(templateSeedData);
+            ripeningTime=thisSeedsData.ripeningTime;
         }
     }
 
@@ -26,6 +28,7 @@ public class Seeds : MonoBehaviour
     public IEnumerator StartGrow()
     {
         thisSeedsData.ripeningTime-=Time.deltaTime;
+        //silder.GetComponent<Image>().fillAmount=thisSeedsData.ripeningTime/ripeningTime;
         yield return new WaitForEndOfFrame();
         if(thisSeedsData.ripeningTime<=0)
         {

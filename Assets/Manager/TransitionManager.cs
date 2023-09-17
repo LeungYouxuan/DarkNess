@@ -39,6 +39,7 @@ public class TransitionManager : Singleton<TransitionManager>,ISaveable
             SceneManager.sceneLoaded+=(Scene loadScene,LoadSceneMode loadSceneMode)=>
             {
                 LoaderManager.Instance.Load();
+                Debug.Log("场景加载完成");
             };
         }
     }

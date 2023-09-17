@@ -14,7 +14,7 @@ public class ItemManager : Singleton<ItemManager>,ISaveable
         base.Awake();
         realItemList=new List<GameObject>();
         //这里可以做背包默认物品加载操作
-        itemDic.Add("Rifle",3);
+        //itemDic.Add("Rifle",3);
     }
     private void Start() 
     {

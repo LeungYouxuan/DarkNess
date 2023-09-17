@@ -1,49 +1,11 @@
 {
   "version": 3,
   "targets": {
-    ".NETStandard,Version=v2.0": {
-      "Wx/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
-        "compile": {
-          "bin/placeholder/Wx.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Wx.dll": {}
-        }
-      },
-      "WxEditor/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
-        "dependencies": {
-          "Wx": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/WxEditor.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/WxEditor.dll": {}
-        }
-      }
-    }
+    ".NETStandard,Version=v2.0": {}
   },
-  "libraries": {
-    "Wx/1.0.0": {
-      "type": "project",
-      "path": "Wx.csproj",
-      "msbuildProject": "Wx.csproj"
-    },
-    "WxEditor/1.0.0": {
-      "type": "project",
-      "path": "WxEditor.csproj",
-      "msbuildProject": "WxEditor.csproj"
-    }
-  },
+  "libraries": {},
   "projectFileDependencyGroups": {
-    ".NETStandard,Version=v2.0": [
-      "Wx >= 1.0.0",
-      "WxEditor >= 1.0.0"
-    ]
+    ".NETStandard,Version=v2.0": []
   },
   "packageFolders": {
     "C:\\Users\\Splendid\\.nuget\\packages\\": {},
@@ -52,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "d:\\UnityProject\\DarkNess\\Assembly-CSharp-firstpass.csproj",
-      "projectName": "Assembly-CSharp-firstpass",
-      "projectPath": "d:\\UnityProject\\DarkNess\\Assembly-CSharp-firstpass.csproj",
+      "projectUniqueName": "d:\\UnityProject\\DarkNess\\Wx.csproj",
+      "projectName": "Wx",
+      "projectPath": "d:\\UnityProject\\DarkNess\\Wx.csproj",
       "packagesPath": "C:\\Users\\Splendid\\.nuget\\packages\\",
       "outputPath": "d:\\UnityProject\\DarkNess\\obj\\",
       "projectStyle": "PackageReference",
@@ -76,14 +38,7 @@
       "frameworks": {
         "netstandard2.0": {
           "targetAlias": "netstandard2.0",
-          "projectReferences": {
-            "d:\\UnityProject\\DarkNess\\Wx.csproj": {
-              "projectPath": "d:\\UnityProject\\DarkNess\\Wx.csproj"
-            },
-            "d:\\UnityProject\\DarkNess\\WxEditor.csproj": {
-              "projectPath": "d:\\UnityProject\\DarkNess\\WxEditor.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {

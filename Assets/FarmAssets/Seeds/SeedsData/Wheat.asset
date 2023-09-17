@@ -18,3 +18,4 @@ MonoBehaviour:
   seedSprite: {fileID: 0}
   clearCount: 3
   isRipe: 0
+  seedValue: 1

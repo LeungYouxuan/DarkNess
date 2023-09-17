@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7155365573430471788}
   m_Layer: 0
   m_Name: Carrot
-  m_TagString: Untagged
+  m_TagString: Crop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27,11 +27,11 @@ Transform:
   m_GameObject: {fileID: 1178753871634833610}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.4080229, y: 0.9179535, z: -9.235691}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 4.69065, y: 4.69065, z: 4.69065}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8501892474422086444
 SpriteRenderer:
@@ -99,3 +99,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   templateSeedData: {fileID: 11400000, guid: 2c514ec8db741cc47a06773bf1dc8f07, type: 2}
   thisSeedsData: {fileID: 0}
+  silder: {fileID: 0}

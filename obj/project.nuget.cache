@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "59DyhmabSW8EjsIjt1qxHQrfQ5AAEHTtajegcC/JjSP7++lD+TUPnmOOfYpH0yVCPluDNPYTgWbLJj3v1e7Ltw==",
+  "dgSpecHash": "pehykmsCebN4JVAjgemIMlT569MIAQoPWimEQBqn/pUKBFGA4EclYcrBkBi75XYOvGfHMEDPxxG9PSbDH3X6Mg==",
   "success": true,
-  "projectFilePath": "d:\\UnityProject\\DarkNess\\Assembly-CSharp-firstpass.csproj",
+  "projectFilePath": "d:\\UnityProject\\DarkNess\\Wx.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

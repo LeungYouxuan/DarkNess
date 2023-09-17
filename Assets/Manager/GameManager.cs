@@ -12,20 +12,20 @@ public class GameManager : Singleton<GameManager>,ISaveable
     }
     void Start()
     {
+        if(!SceneManager.GetSceneByName("UIScene").isLoaded)
+            SceneManager.LoadScene("UIScene",LoadSceneMode.Additive);
         if(SceneManager.GetSceneByName(currentSceneName).isLoaded)
             return;
         else
             SceneManager.LoadScene(currentSceneName,LoadSceneMode.Additive);
+        
         EventManager.Instance.AddEventListener("ReturnToGame",WhenGameReStart);
         EventManager.Instance.AddEventListener("PauseGame",WhenGamePause);
-
-        //注册风车农场游戏的一些事件:
-        // EventManager.Instance.AddEventListener("AfterPlant",GridManager.Instance.AfterPlant);
-        // EventManager.Instance.AddEventListener("AfterPlant",()=>CursorManager.Instance.canClick=true);
     }
     // Update is called once per frame
     void Update()
     {
+
     }
     public void WhenGamePause()
     {
@@ -37,6 +37,15 @@ public class GameManager : Singleton<GameManager>,ISaveable
         //这里写上游戏恢复时的操作
         Time.timeScale=1;
     }    
+    public void BeforeFarmGameStart()
+    {
+        //切换场景
+        //读取关卡数据
+    }
+    public void AfterFarmGameEnd()
+    {
+
+    }
     public GameSaveData GenerateSaveData()
     {
         GameSaveData newGameSaveData = new GameSaveData();

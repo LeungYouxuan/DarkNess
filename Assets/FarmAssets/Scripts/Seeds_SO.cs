@@ -10,4 +10,5 @@ public class Seeds_SO : ScriptableObject
     public Sprite seedSprite;
     public int clearCount;
     public bool isRipe;
+    public int seedValue;
 }

@@ -1,26 +1,40 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class Grid : ItemOnWorld
 {
     public int id;
     public GameObject thisGridSeed;
+    private void OnEnable() 
+    {
+      
+    }
     void Start()
     {
         if(GridManager.Instance!=null)
         {
             //GridManager.Instance.gridList.Add(this.gameObject);
-            GridManager.Instance.gridPositonDic.Add(this.gameObject.transform.localPosition, this.gameObject);
+            if(!GridManager.Instance.gridPositonDic.ContainsKey(this.gameObject.transform.localPosition))
+                GridManager.Instance.gridPositonDic.Add(this.gameObject.transform.localPosition, this.gameObject);
+            else
+                GridManager.Instance.gridPositonDic[this.gameObject.transform.localPosition]=this.gameObject;
             canInteract=true;
+            Debug.Log(this.gameObject.transform.localPosition);
+            gameObject.GetComponent<SpriteRenderer>().color=new Color32(79,23,113,255);
         }
+        if(transform.localPosition==new Vector3(0,0,0))
+        {
+            Destroy(gameObject);
+        }  
     }
 
     // Update is called once per frame
     void Update()
     {
         //如果耕地被种下了种子，就马上开始种子生长计时
-        if(canInteract==false)
+        if(canInteract==false&&thisGridSeed!=null)
         {
             if(thisGridSeed.GetComponent<Seeds>().thisSeedsData.isRipe==false)
                 StartCoroutine(thisGridSeed.GetComponent<Seeds>().StartGrow());
@@ -38,18 +52,6 @@ public class Grid : ItemOnWorld
             canInteract=false;
             CursorManager.Instance.canClick=true;
             GridManager.Instance.AfterPlant();
-            // var clearList=GridManager.Instance.MatchGrids(this.gameObject);
-            // if(clearList.Count!=0)
-            // {
-            //     //这里执行清除操作,清除的是耕地上种植的作物
-            //     //播放消除动画
-            //     foreach(var item in clearList)
-            //     {
-            //         //Debug.Log(item.transform.GetChild(0).name);
-            //         Destroy(item.transform.GetChild(0).gameObject);
-            //         item.GetComponent<Grid>().canInteract=true;
-            //     }
-            // }
         }
         else
         {

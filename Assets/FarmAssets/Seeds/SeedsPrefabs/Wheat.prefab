@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1163606790573710639}
   m_Layer: 0
   m_Name: Wheat
-  m_TagString: Untagged
+  m_TagString: Crop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99,3 +99,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   templateSeedData: {fileID: 11400000, guid: 27f3ad3d133671246a1ac5ce08e52f3f, type: 2}
   thisSeedsData: {fileID: 0}
+  silder: {fileID: 0}
